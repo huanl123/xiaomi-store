@@ -1,0 +1,717 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script src="js/jquery-3.1.1.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="css/mybjb.css"/>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			body{	
+				background: lightgray;
+			}
+			#one{
+				line-height: 40px;
+				font-size: 12px;
+			}
+			#one a{
+				color: black;
+				text-decoration: none;
+				opacity: 0.5;
+			}
+			#one a:hover{
+				opacity: 1;
+			}
+			#two{
+				background: white;
+				line-height: 80px;
+			}
+			#two a{
+				font-size: 13px;
+				text-decoration: none;
+				color: black;
+				margin: 50px;
+			}
+			#two a:hover{
+				color: orange;
+			}
+			#two #s1{
+				margin: 20px;
+				color: black;
+				opacity: 0.5;
+			}
+			#two #p{
+				position: relative;
+				left: 80px;
+			}
+			#ps{
+				text-indent: 10em;
+			}
+			#ps #sj{
+				position: relative;
+				left: -20px;
+			}
+			#ps #sj2{
+				position: relative;
+				left: 55px;
+			}
+			#three #p1{
+				text-indent: 5em;
+			}
+			#three #p2{
+				position: relative;
+				top: -20px;
+				text-indent: 79em;
+				font-size: 13px;
+			}
+			#three a{
+				margin: 20px;
+				font-size: 13px;
+				text-decoration: none;
+				color: black;
+			}
+			#three a:hover{
+				color: orange;
+			}
+			#three span{
+				opacity: 0.3;
+			}
+			#four{
+				font-size: 13px;
+				height: 700px;
+				width: 100%;
+			}
+			#four #four1{				
+				background: white;
+				width: 300px;
+				position: relative;
+				left: 100px;
+			}
+			#four #tu1{
+				position: relative;
+				left: 55px;
+			}
+			#four p{
+				text-indent: 1em;
+				line-height: 30px;
+			}
+			#four #fs1{
+				position: relative;
+				left: 95px;
+				color: orange;
+			}
+			#four #fs2{
+				position: relative;
+				left: 100px;
+				opacity: 0.3;
+				text-decoration: line-through;
+			}
+			.img1{
+				border: 1px gainsboro solid;
+			}
+			.a1:hover{
+				height: 36px;
+				width: 36px;
+				border: 1px solid orange;
+			}
+			#four #cx{
+				text-indent: 2em;
+				color: white;
+				background: #E53935;
+			}
+			#four #four2{				
+				background: white;
+				width: 300px;
+				position: relative;
+				top: -404px;
+				left: 410px;
+			}
+			#four #four3{				
+				background: white;
+				width: 300px;
+				position: relative;
+				top: -808px;
+				left: 720px;
+			}
+			#four #four4{				
+				background: white;
+				width: 300px;
+				position: relative;
+				top: -1212px;
+				left: 1030px;
+			}
+			#five{
+				height: 550px;
+			}
+			#five p{
+				text-align: center;
+				font-size: 15px;
+			}
+			#five center{
+				color: orange;
+			}
+			#five a{
+				position: relative;
+				left: 77px;
+				font-size: 15px;
+				border: 1px orange solid;
+				color: orange;
+				text-decoration: none;
+				line-height: 30px;
+				width: 200px;
+			}
+			#five a:hover{
+				background: orange;
+				color: white;
+			}
+			#five h1{
+				color: rgb(128, 128, 128);
+				font-size: 40px;
+				text-align: center;
+				line-height: 50px;
+				position: relative;
+				top: -70px;
+			}
+			#five hr{
+				color: rgb(128, 128, 128);
+				line-height: 50px;
+			}
+			#five #v1{
+				background: white;
+				width: 235px;
+				position: relative;
+				left: 100px;
+				top: 50px;
+			}
+			#five #v2{
+				background: white;
+				width: 235px;
+				position: relative;
+				left: 350px;
+				top: -228px;
+			}
+			#five #v3{
+				background: white;
+				width: 235px;
+				position: relative;
+				left: 600px;
+				top: -506px;
+			}
+			#five #v4{
+				background: white;
+				width: 235px;
+				position: relative;
+				left: 850px;
+				top: -784px;
+			}
+			#five #v5{
+				background: white;
+				width: 235px;
+				position: relative;
+				left: 1100px;
+				top: -1062px;
+			}
+			#zui{
+			width: 100%;
+			height: 300px;
+			display: block;
+			position: relative;
+			left: 200px;
+		}
+		#zui img{
+			width: 150px;
+			height: 150px;
+		}
+		
+		#zui div span a{
+			text-decoration: none;
+		}
+		.jiange{
+			position: relative;
+			left: 170px;
+			bottom: 150px;
+		}
+		#zui div a{
+			text-decoration: none;
+			color: #000000;
+		}
+		#zui p a{
+			line-height: 50px;
+			text-decoration: none;
+			color: #000000;
+			opacity: 0.6;
+		}
+		#zui p{
+			position: relative;
+			left: 170px;
+			bottom: 150px;
+			display: block;
+		}
+		#zui p a:hover{
+			color: orange;
+		}
+		#zui div a:hover{
+			color: orange;
+		}
+		</style>
+	</head>
+	<body>
+		<script type="text/javascript">
+		$(document).ready(function(){
+				$("#ps").hide();
+			})
+			$(document).ready(function(){
+				$("#xiala1").click(function(){
+					$("#ps").slideToggle();
+				})
+			})
+			
+			
+			
+			
+//			轮播开始
+		    $(function(){
+         //初始化，设置第一个出现的图片和触碰点
+        $(".t1 li").first().show();
+        $(".t2 li").first().addClass("active");
+//鼠标悬停事件，排斥其他按钮
+        $(".t2 li").mouseover(function(){
+         //悬停时
+        $(this).addClass("active").siblings("li").removeClass("active");
+        var index=$(this).index();//获取索引
+
+        i=index;
+
+        $(".t1 li").eq(index).fadeIn().siblings("li").fadeOut();//筛选淡入其余淡出
+        })
+//定时自动 setInterval(所执行方法函数，毫秒)
+//所设定时间为2000毫秒,即2秒一次
+var i=0;
+       var t = setInterval(move,2000);
+
+function move(){//一次定义函数多次使用
+           i++;
+           if(i==5){
+               i=0;//判断循环到四张图的时候回到第一图重新播放
+           }
+           $(".t2 li").eq(i).addClass("active").siblings("li").removeClass("active");
+           $(".t1 li").eq(i).fadeIn().siblings().fadeOut();//筛选淡入
+        }
+
+function moveleft(){//一次定义函数多次使用(向左的滑板)
+           i--;
+           if(i==-1){
+               i=4;//判断循环到四张图的时候回到第一图重新播放
+           }
+           $(".t2 li").eq(i).addClass("active").siblings("li").removeClass("active");
+           $(".t1 li").eq(i).fadeIn().siblings().fadeOut();//筛选淡入
+        }
+
+
+
+
+$(".s1").hover(function(){
+clearInterval(t);
+},function(){
+t = setInterval(move,2000);
+})
+
+//点击右边箭头进行移动执行动画
+$(".s1 .right").click(function(){
+    move();
+    })
+//点击左边箭头执行的动画
+$("s1 .left").click(function(){
+    moveleft();
+})
+})
+		</script>
+		
+		
+		
+		<style type="text/css">
+					*{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+.t1 img{
+    width: 1226px;
+    height: 460px;
+}
+.s1{
+    width: 1226px;
+    height: 460px;
+    margin: 50px auto;
+    position: relative;
+}
+.t1 li{
+position: absolute;
+top: 0;
+left: 0;
+display: none;
+}
+.t2 li{
+    width: 20px;
+    height: 20px;
+    background: white;
+    font-size: 14px;
+    border-radius: 50%;
+    text-align: center;
+    display: inline-block;
+    cursor: pointer;
+}
+.t2 li.active{
+    background-color: chocolate;
+}
+.t2{
+    position: absolute;
+    bottom: 10px;
+    left:50%;
+}
+.s1 .anniu{
+    width: 30px;
+    height: 60px;
+    background: rgba(0, 0, 0, 0.3);
+    color: white;
+    font-size: 14px;
+    text-align: center;
+    line-height: 60px;
+    position: absolute;
+    top: 50%;
+    margin-top: -30px;
+    cursor: pointer;
+}
+.s1 .left{
+    left: 0;
+}
+.s1 .right{
+    right: 0;
+}
+		
+		
+		
+		
+		.list-1s{
+        width: 234px;
+        height: 460px;
+        border: 2px solid red;
+        position: absolute;
+        top: 100px;
+        left:60px;
+        z-index: 1;
+        background-color: #000000;
+        opacity: 0.8;
+        color: white;
+    }
+		
+		</style>
+		
+		<div class="dingbu">
+			<div id="dingbu-s1">
+                <a href="index.html">小米商城</a>		
+                <a href="#">MIUI</a>
+                <a href="#">loT</a>
+                <a href="#">云服务</a>
+                <a href="#">金融</a>
+                <a href="#">有品</a>
+                <a href="#">小爱开放平台</a>
+                <a href="#">政企服务</a>
+                <a href="#">下载APP</a>
+                <a href="#">Select Region</a>	
+               </div>
+                <style type="text/css">
+                	#dingbu-s2{
+                		display:inline-block;
+                		position: relative;
+                		left: 380px;
+                	}
+#dingbu-s1{
+	position: relative;
+	display: inline-block;
+	right: 50px;
+}
+                </style>
+<div id="dingbu-s2">
+	                <a href="login.html" class="dengLu">登陆</a>
+                <a href="register.html" class="zhuche">注册</a>
+                <a href="#" class="xiaoxi">销售通知</a>
+</div>
+                </div>
+		
+		<div id="one">
+			<p>
+			<a href="index.html">首页</a>
+			<span>></span>
+			<a href="#">全部结果</a>
+			<span>></span>
+			<span>笔记本</span>
+		</p>
+		</div>
+		<div id="two">
+			<p id="p">
+			<span id="s1">分类:</span>
+			<a href="#">全部</a>
+			<a href="#">小米笔记本 15.6"</a>
+			<a href="#">小米笔记本 13.3"</a>
+			<a href="#">小米笔记本 12.5"</a>
+			<a href="#">小米游戏本</a>
+			<a href="#">转接器</a>
+			<a href="#" id="xiala1">更多<img src="img/tupian.jpg"/></a>
+			</p>
+			<p>
+			<p id="ps">
+			<a href="#">线材</a>
+			<a href="#">笔记本</a>
+			<a href="#">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;贴纸</a>
+			<a href="#">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;保护套/保护壳</a>
+			<a href="#">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;箱包</a>
+			<a href="#">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;无线鼠标</a>
+			<br />
+			<a href="#">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;便携鼠标</a>
+			<a href="#" id="sj">贴膜</a>
+			<a href="#" id="sj2">鼠标垫</a>
+			</p>
+		</div>
+		
+		
+		
+		
+			    <div class="s1">
+        <div class="t1">
+<ul>
+        <li><a href="#"><img src="img/YXB4.jpg"  alt=""></a></li>
+        <li><a href="#"><img src="img/YXB1.jpg" alt=""></a></li>
+        <li><a href="#"><img src="img/YXB2.jpg" alt=""></a></li>
+        <li><a href="#"><img src="img/YXB3.jpg" alt=""></a></li>
+</ul>
+        </div>
+        <div class="t2">
+<ul>
+    <li>&nbsp;</li>
+    <li>&nbsp;</li>
+    <li>&nbsp;</li>
+    <li>&nbsp;</li>
+</ul>
+        </div>
+        <div class="anniu left">
+        &lt;
+        </div>
+        <div class="anniu right">
+        &gt;
+        </div>
+    </div>
+    
+    
+    
+    
+    
+		<br />
+		<br />
+		<div id="three">
+			<p id="p1">
+				<a href="#">推荐</a>
+				<span>|</span>
+				<a href="#">新品</a>
+				<span>|</span>
+				<a href="#">价格&nbsp;↑</a>
+				<span>|</span>
+				<a href="#">评论最多</a>
+			</p>
+			<p id="p2">
+				<input type="checkbox" value="查看" id="ck"/>
+				<label for="ck">查看评价</label>
+				<input type="checkbox" value="特惠" id="th"/>
+				<label for="th">仅显示特惠商品</label>
+				<input type="checkbox" value="查看" id="pj"/>
+				<label for="pj">仅显示有货商品</label>
+			</p>
+		</div>
+		<style type="text/css">
+			#four1:hover{
+				box-shadow: #000000 1px 1px 10px; 		
+				cursor: pointer;
+			}
+			#four2:hover{
+				box-shadow: #000000 1px 1px 10px; 		
+				cursor: pointer;
+			}
+			#four3:hover{
+				box-shadow: #000000 1px 1px 10px; 		
+				cursor: pointer;
+			}
+			#four4:hover{
+				box-shadow: #000000 1px 1px 10px; 		
+				cursor: pointer;
+			}
+		</style>
+		<div id="four">
+			<div id="four1">
+				<br /><br />
+				<a href="bijiben.html" target="_blank"><img src="img/pms_1533196200.13174382!200x200.jpg" /></a>
+				<p>小米游戏本15.6”8代i5 8G 1T+256G 1060 6G</p>
+				<p>
+					<span >8799元</span>
+					<span >8999元</span>
+				</p>
+				<br />
+				<p>
+						<a href="#" class="a1"><img src="img/nn.jpg" class="img1"/></a>
+				</p>
+				<br /><br />
+				<div >
+					<span>9.8折促销</span>
+				</div>
+			</div>
+			<div id="four2">
+				<br /><br />
+				<a href="bijiben.html" target="_blank"><img src="img/pms_1533196200.13174382!200x200.jpg" /></a>
+				<p>小米游戏本15.6”8代i7 8G 1T+256G 1050Ti 4G</p>
+				<p>
+					<span >7799元</span>
+					<span >7999元</span>
+				</p>
+				<br />
+				<p>
+						<a href="#" class="a1"><img src="img/nn.jpg" class="img1"/></a>
+				</p>
+				<br /><br />
+				<div >
+					<span>9.8折促销</span>
+				</div>
+			</div>
+			<div id="four3">
+				<br /><br />
+				<a href="bijiben.htmll" target="_blank"><img src="img/pms_1533196200.13174382!200x200.jpg" /></a>
+				<p>小米游戏本15.6”8代i7 8G 1T+256G 1050Ti 4G</p>
+				<p>
+					<span >7499元</span>
+					<span >7699元</span>
+				</p>
+				<br />
+				<p>
+						<a href="#" class="a1"><img src="img/nn.jpg" class="img1"/></a>
+				</p>
+				<br /><br />
+				<div >
+					<span>9.8折促销</span>
+				</div>
+			</div>
+			<div id="four4">
+				<br /><br />
+				<a href="bijiben.html" target="_blank"><img src="img/pms_1533196200.13174382!200x200.jpg" id="tu1"/></a>
+				<p>小米游戏本15.6”8代i7 8G 1T+256G 1050Ti 4G</p>
+				<p>
+					<span id="fs1">6499元</span>
+					<span id="fs2">6699元</span>
+				</p>
+				<br />
+				<p>
+						<a href="#" class="a1"><img src="img/nn.jpg" class="img1"/></a>
+				</p>
+				<br /><br />
+				<div id="cx">
+					<span>9.8折促销</span>
+				</div>
+			</div>
+		</div>
+		<style type="text/css">
+			#v1:hover{	
+				cursor: pointer;
+			}
+		#v2:hover{	
+				cursor: pointer;
+			}
+		#v3:hover{		
+				cursor: pointer;
+			}
+		#v4:hover{		
+				cursor: pointer;
+			}
+		#v5:hover{ 		
+				cursor: pointer;
+			}
+		</style>
+		<div id="five">
+			<h1>为您推荐</h1>
+			<hr />
+			<div id="v1">
+				<p><img src="img/pms_1536833428.43292402!140x140.jpg"/></p>
+				<br />
+				<p>
+					小米手环3 NFC版 
+				</p>
+				<br />
+				<p>199元</p>
+				<br />
+				</style>
+				<a href="#" class="a-1">加入购物车</a>
+			</div>
+			<div id="v2">
+				<p><img src="img/pms_1508895293.24876014!140x140.jpg"/></p>
+				<br />
+				<p>
+					小米数码收纳包 
+				</p>
+				<br />
+				49元
+				<br />
+				</style>
+				<a href="#" class="a-1">加入购物车</a>
+			</div>
+			<div id="v3">
+				<img src="img/pms_1481099756.86043368!140x140.jpg"/>
+				<br />
+				<p>
+					小米影视会员年卡 券  
+				</p>
+				<br />
+				 498元
+				<br />
+				</style>
+				<a href="#" class="a-1">加入购物车</a>
+			</div>
+			<div id="v4">
+				<img src="img/pms_1497672764.01987286!140x140.jpg"/>
+				<br />
+				<p>
+					小米学院休闲双肩包
+				</p>
+				<br />
+				69元
+				<br />
+				</style>
+				<a href="#" class="a-1">加入购物车</a>
+			</div>
+			<div id="v5">
+				<img src="img/pms_1463975728.16077005!140x140.jpg"/>
+				<br />
+				<p>
+					悟空米兔
+				</p>
+				<br />
+				<p>49元</p>
+				<br />
+				</style>
+				<a href="#" class="a-1">加入购物车</a>
+			</div>
+		</div>
+		<div id="zui">
+				<img src="img/timg.jpg"/>
+				<div class="jiange"><a href="">&nbsp;小米商城&nbsp;</a>|<a href="">&nbsp;MIUI&nbsp;</a>|<a href="">&nbsp;米家&nbsp;</a>|<a href="">&nbsp;米聊&nbsp;</a>|<a href="">&nbsp;多看&nbsp;</a>|<a href="">&nbsp;游戏&nbsp;</a>|<a href="">&nbsp;路由器&nbsp;</a>|<a href="">&nbsp;米粉卡&nbsp;</a>|<a href="">&nbsp;政企服务&nbsp;</a>|<a href="">&nbsp;小米天猫店&nbsp;</a>|<a href="">&nbsp;隐私政策&nbsp;</a>|<a href="">&nbsp;问题反馈&nbsp;</a>|<a href="">&nbsp;廉政举报&nbsp;</a>|<a href="">&nbsp;Select Region&nbsp;</a></div>
+				<p>
+					<a href="">&copy;<span>mi.com</span>京ICP证110507号</a>&nbsp
+					<a href="">京ICP备10046444号</a>&nbsp;<a href="">京公网安备11010802020134号</a>&nbsp;<a href="">京网文[2017]1530-131号</a>
+				</p>
+				<p>
+					<a href="">(京)网械平台备字(2018)第00005号</a>&nbsp;
+					<a href="">互联网药品信息服务资格证(京)-非经营性-204-0090</a>&nbsp;
+					<a href="">营业执照</a>&nbsp;
+					<a href="">医疗器械公告</a>
+				</p>
+			</div>
+	</body>
+</html>

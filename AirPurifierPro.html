@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#box1{
+				width: 100%;
+				height: 100px;
+				background:orange;
+				position: fixed;
+				top: 0;
+				left: 0;
+				text-decoration: none;
+				z-index: 5;
+			}
+			div:nth-of-type(1){
+				display: inline;
+				position: fixed;
+				right: 0;
+				top: 0;
+			}
+			div:nth-of-type(1) h1{
+				font-size: 25px;
+				display: inline;
+				color: white;
+				font-weight: initial;
+				position: absolute;
+				left: 70px;
+				bottom: 0px;
+			}
+			div:nth-of-type(1) h2{
+				font-size: 14px;
+				display: inline;
+				position: absolute;
+				left: 300px;
+				bottom: 10px;
+			}
+			div:nth-of-type(1) h2 a{
+				color: #818181;
+				text-decoration: none;
+			}
+			div:nth-of-type(1) a:hover{
+				color: white;
+			}
+			div:nth-of-type(1) p{
+				display: inline;
+				color: #616161;
+				position: absolute;
+				left: 1000px;
+				bottom: 10px;
+			}
+			div:nth-of-type(1) p a{
+				color: #000000;
+				font-size: 14px;
+				opacity: 0.7;
+				text-decoration: none;
+			}
+			div:nth-of-type(1) span a{
+				border: 5px;
+				background-color: orange;
+				text-decoration: none;
+				border-radius: 1px;
+				box-shadow: 2px 2px 2px orange;
+				color: white;
+			}
+			div:nth-of-type(1) span a:hover{
+				color: white;
+				background-color:white;
+			}
+			#zonghezhang{
+				width: 100%;
+				height: 2300px;
+			}
+			#jing{
+				display: inline-block;
+				width: 100%;
+				height: 800px;
+				position: absolute;
+				bottom: -450px;
+				left: 0px;
+			}
+			#jing img{
+				width: 700px;
+				height: 700px;
+				position: absolute;
+				bottom: 25px;
+				left: 150px;
+				transition: all 0.5s ease-in-out;
+			}
+			#jing img:hover{
+				transform: rotate(0deg) scale(1.05);
+			}
+			#jing h1{
+				position:absolute;
+				bottom: 600px;
+				left: 900px;
+				color: black;
+			}
+			#jing h3{
+				position:absolute;
+				bottom: 550px;
+				left: 900px;
+				font-size: 14px;
+				color: #000000;
+				opacity: 0.5;
+			}
+			#jing p{
+				position:absolute;
+				bottom:510px;
+				left: 900px;
+				font-size: 16px;
+				color: darkorange;
+			}
+			.sanchuxian{
+				width: 300px;
+				height: 20px;
+				position:absolute;
+				bottom:500px;
+				left: 900px;
+				font-size: 16px;
+				color: darkorange;
+			}
+			.sanchuxian img{
+				width: 500px;
+				height: 70px;
+				position: absolute;
+				bottom: -150px;
+			}
+			.sanchuxian span{
+				color: #000000;
+				opacity: 0.5;
+				text-decoration: line-through;
+			}
+			.sanchuxian2{
+				width: 300px;
+				height: 20px;
+				position:absolute;
+				bottom:390px;
+				left: 900px;
+			}
+			#dizhi{
+				width: 400px;
+				height: 70px;
+				background-color: white;
+				border: 1px #CACECF solid;
+				position: absolute;
+				bottom: 250px;
+				left: 900px;
+			}
+			#dizhi img{
+				width: 30px;
+				height: 30px;
+				position: absolute;
+				left: 20px;
+				bottom: 20px;
+			}
+			#dizhi p{
+				font-size: 14px;
+				color: #818181;
+				position: absolute;
+				left: 50px;
+				bottom: 10px;
+			}
+			#dizhi span{
+				color: orange;
+				position: absolute;
+				left: 300px;
+				bottom: -20px;
+			}
+			#dizhi a{
+				font-size: 15px;
+				color: orange;
+				text-decoration: none;
+				position: absolute;
+				left: 250px;
+				bottom: -20px;
+			}
+			#dizhi a:hover{
+				color: yellow;
+			}
+			#yanse{
+				width: 250px;
+				height: 100px;
+				font-size: 14px;
+				font-weight: initial;
+				position: absolute;
+				bottom: 150px;
+				left: 900px;
+			}
+			#yanse h1{
+				font-size: 14px;
+			}
+			#yanse p{
+				width: 200px;
+				height: 50px;
+				border: 1px orange solid;
+				background-repeat: no-repeat;
+				background-size: 20px 30px;
+				background-position: 50px;
+			}
+			#yanse p a{
+				font-size: 14px;
+				font-weight: bold;
+				color: orange;
+				text-decoration: none;
+				position: absolute;
+				left: 90px;
+				bottom: 20px;
+				transition: all 0.5s ease-in-out;
+				cursor: pointer;
+			}
+			#yanse p a:hover{
+				transform: rotate(0deg) scale(1.5);
+				color: #FF6700;
+			}
+			#zongji{
+				width: 500px;
+				height: 100px;
+				position: absolute;
+				bottom: 150px;
+				left: 900px;
+			}
+			.jihe{
+				width: 500px;
+				height: 100px;
+				border: 0px orange solid;
+				background-color: lightcyan;
+				position: absolute;
+				bottom: -120px;
+				left: 0px;
+			} 
+			.jihe a{
+				font-size: 14px;
+				position: absolute;
+				left: 20px;
+				bottom: 70px;
+			}
+			.jihe a:nth-of-type(2){
+				font-size: 17px;
+				position: absolute;
+				left: 340px;
+				bottom: 70px;
+			}
+			.jihe a span{
+				font-size: 17px;
+				position: absolute;
+				left:80px;
+				bottom: 0px;
+				text-decoration: line-through;
+			}
+			.hedazi{
+				font-size: 18px;
+				color: orange;
+				position: absolute;
+				left: 20px;
+				bottom: -100px;
+			}
+			#gouwu{
+				width: 250px;
+				height: 50px;
+				background-color: #FF6700;
+				position: absolute;
+				bottom: -50px;
+				left: 900px;
+			}
+			#gouwu h3{
+				width: 250px;
+				height: 50px;
+				border: 0px orange solid;
+				position: absolute;
+				bottom: -20px;
+			}
+			#gouwu h3 p{
+				position: absolute;
+				bottom: -5px;
+				left: 70px;
+			}
+			#gouwu h3 p a{
+				color: white;
+				text-decoration: none;
+			}
+			#gouwu h3 p a:hover{
+				color: #FFFF00;
+			}
+			#shoucang{
+				width: 200px;
+				height: 50px;
+				background-color: #B0B0B0;
+				position: absolute;
+				bottom: -50px;
+				left: 1200px;
+			}
+			#shoucang h2{
+				width: 200px;
+				height: 50px;
+				border: 0px orange solid;
+				position: absolute;
+				bottom: -20px;
+			}
+			#shoucang h2 p{
+				position: absolute;
+				bottom: -15px;
+				left: 70px;
+			}
+			#shoucang h2 p a{
+				color: white;
+				text-decoration: none;
+			}
+			#shoucang h2 p a:hover{
+				color: #424242;
+			}
+			#fangshi{
+				width: 100px;
+				height: 50px;
+				background-color: white;
+				position: absolute;
+				bottom: -120px;
+				left: 900px;
+			}
+			#fangshi a{
+				color: #B0B0B0;
+			}
+			#fangshi2{
+				width: 100px;
+				height: 50px;
+				background-color: white;
+				position: absolute;
+				bottom: -120px;
+				left: 1000px;
+			}
+			#fangshi2 a{
+				color: #B0B0B0;
+			}
+			#fangshi3{
+				width: 150px;
+				height: 50px;
+				background-color: white;
+				position: absolute;
+				bottom: -120px;
+				left: 1100px;
+			}
+			#fangshi3 a{
+				color: #B0B0B0;
+			}
+			#fangshi4{
+				width: 100px;
+				height: 50px;
+				background-color: white;
+				position: absolute;
+				bottom: -120px;
+				left: 1250px;
+			}
+			#fangshi4 a{
+				color: #B0B0B0;
+			}
+			#fangshi5{
+				width: 150px;
+				height: 50px;
+				background-color: white;
+				position: absolute;
+				bottom: -120px;
+				left: 1350px;
+			}
+			#fangshi5 a{
+				color: #B0B0B0;
+			}
+			#dierhe{
+				width: 100%;
+				height: 1100px;
+				background-color:orange ;
+				position: absolute;
+				bottom: -1250px;
+				left: 0px;
+			}
+			#xiao{
+				width: 100%;
+				height: 100px;
+				margin: 50px;
+				position: absolute;
+				bottom: -720px;
+				left: 0px;
+			}
+			#xiao h1{
+				font-size: 25px;
+				font-weight: bold;
+				color: white;
+			}
+			#xiao h1 a{
+				width: 150px;
+				height: 100px;
+				font-size: 20px;
+				font-weight: bold;
+				color: white;;
+				text-decoration: none;
+				position: absolute;
+				bottom: -50px;
+				left: 1200px;
+			}
+			#xiao h1 a:hover{
+				color: #FF8C00;
+			}
+			.xingtu{
+				width: 100%;
+				height: 375px;
+			}
+			.xingtu img{
+				position: absolute;
+				bottom: 600px;
+				left: 200px;
+			}
+			.xingtu p{
+				width: 1186px;
+				height: 150px;
+				border: 0px orange solid;
+				text-align: center;
+				color: #818181;
+				background-color: white;
+				position: absolute;
+				bottom: 436px;
+				left: 200px;
+			}
+			#xiao2{
+				width: 100%;
+				height: 100px;
+				margin: 100px;
+				position: absolute;
+				bottom: 200px;
+				left: 0px;
+			}
+			#xiao2 h1{
+				font-size: 25px;
+				color: white;
+			}
+			#xiao2 h1 span{
+				font-size: 27px;
+				font-weight: bold;
+				color: white;
+			}
+			.xingtu2 img{
+				width: 1180px;
+				height: 160px;
+				margin: 100px;
+				position: absolute;
+				bottom: 50px;
+				left: 100px;
+			}
+			#fangwei a{
+			text-align: center;
+			color: #818181;
+			text-decoration: none;
+			}
+			#zhong{
+				width: 100%;
+				height: 500px;
+				position: absolute;
+				bottom: -1800px;
+				left: -1450px;
+			}
+			#zhong1{
+				width: 200px;
+				height: 100px;
+				font-size: 16px;
+				position: absolute;
+				bottom: 10px;
+				left: 500px;
+			}
+			#zhong1 p{
+				width: 200px;
+				height: 50px;
+			}
+			#zhong1 p img:nth-of-type(1){
+				width: 25px;
+				height: 25px;
+				border: 0px #CACECF solid;
+				text-align: center;
+				
+			}
+			#zhong1 p img:nth-of-type(2){
+				width: 25px;
+				height: 25px;
+				border: 0px #CACECF solid;
+				text-align: center;
+				position: absolute;
+				left: 300px;
+				bottom: 20px;
+			}
+			#zhong1 p img:nth-of-type(3){
+				width: 25px;
+				height: 25px;
+				border: 0px #CACECF solid;
+				text-align: center;
+				position: absolute;
+				left: 600px;
+				bottom: 20px;
+			}
+			#zhong1 p img:nth-of-type(4){
+				width: 25px;
+				height: 25px;
+				border: 0px #CACECF solid;
+				text-align: center;
+				position: absolute;
+				left: 900px;
+				bottom: 20px;
+			}
+			#zhong1 p img:nth-of-type(5){
+				width: 25px;
+				height: 25px;
+				border: 0px #CACECF solid;
+				text-align: center;
+				position: absolute;
+				left: 1200px;
+				bottom: 20px;
+			}
+			#zhong1 p a:nth-of-type(1){
+				width: 150px;
+				height: 50px;
+				font-size: 16px;
+				font-weight: bold;
+				color: #616161;
+				text-decoration: none;
+				position: absolute;
+				left: 25px;
+				bottom: -10px;
+			}
+			#zhong1 p a:nth-of-type(2){
+				width: 150px;
+				height: 50px;
+				font-size: 16px;
+				font-weight: bold;
+				color: #616161;
+				text-decoration: none;
+				position: absolute;
+				left: 325px;
+				bottom: -10px;
+			}
+			#zhong1 p a:nth-of-type(3){
+				width: 150px;
+				height: 50px;
+				font-size: 16px;
+				font-weight: bold;
+				color: #616161;
+				text-decoration: none;
+				position: absolute;
+				left: 625px;
+				bottom: -10px;
+			}
+			#zhong1 p a:nth-of-type(4){
+				width: 150px;
+				height: 50px;
+				font-size: 16px;
+				font-weight: bold;
+				color: #616161;
+				text-decoration: none;
+				position: absolute;
+				left: 925px;
+				bottom: -10px;
+			}
+			#zhong1 p a:nth-of-type(5){
+				width: 150px;
+				height: 50px;
+				font-size: 16px;
+				font-weight: bold;
+				color: #616161;
+				text-decoration: none;
+				position: absolute;
+				left: 1225px;
+				bottom: -10px;
+			}
+			#zhong1 p a:hover{
+				color: #FF8C00;
+			}
+			#zuiwei{
+			width: 100%;
+			height: 300px;
+			display: block;
+			position:relative;
+			bottom: -0px;
+			left: 300px;
+			z-index: 9;
+		}
+		#zuiwei img{
+			width: 150px;
+			height: 150px;
+			position: relative;
+			left: 0px;
+			bottom: -30px;
+		}
+		#zuiwei div a{
+			text-decoration: none;
+			color: #000000;
+		}
+		#zuiwei p a{
+			line-height: 50px;
+			text-decoration: none;
+			color: #000000;
+			opacity: 0.6;
+		}
+		#zuiwei p{
+			position: relative;
+			left: 170px;
+			bottom: 150px;
+			display: block;
+		}
+		#zuiwei p a:hover{
+			color: orange;
+		}
+		#zuiwei div a:hover{
+			color: orange;
+		}
+		</style>
+	</head>
+	<body>
+		<div id="box1">
+		<span id="yt" style="position: relative;  color: white;">
+			<a href="index.html">&lt;返回首页</a>
+		</span>
+			<h1>米家空气净化器Pro|</h1><h2><a href="">米家空气净化器 2S|</a><a href=""> 米家空气净化器MAX</a></h2>
+			<p><a href="">概述&nbsp;&nbsp;</a>|&nbsp;&nbsp;<a href="">净化原理&nbsp;&nbsp;</a>|&nbsp;&nbsp;<a href="">图集&nbsp;&nbsp;</a>|&nbsp;&nbsp;<a href="">参数&nbsp;&nbsp;</a>|&nbsp;&nbsp;<a href="">用户评价&nbsp;&nbsp;</a>
+		</div>
+		<div id="zonghezhang">
+		<div id="jing">
+				<img src="./img/pms_1477916442.08799062!560x560.jpg"/>
+				<h1>米家空气净化器Pro</h1>
+				<h3>OLED 显示屏幕 / 激光颗粒物传感器 / 500m³/h颗粒物 CADR / 60㎡适用面积</h3>
+				<p>小米自营</p>
+				<a class="sanchuxian">1099元<span>1499元</span></a>
+		</div>
+		<a class="sanchuxian2"><img src="./img/QQ图片20181106165604.png"/></a>
+		<div id="dizhi">
+				<img src="./img/标点.png"/>
+				<p>北京&nbsp;&nbsp;北京市&nbsp;&nbsp;东城区&nbsp;&nbsp;永定门外街道
+				<p>
+					<a href="">修改</a><span>有现货</span>
+				</p>
+		</div>
+		<div id="yanse">
+			<h1>选择颜色</h1>
+			<p>
+				<a href="">白色</a>
+			</p>
+		</div>
+		<div id="zongji">
+			<p class="jihe">
+				<a>米家空气净化器Pro 白色</a>
+				<style type="text/css">
+					.yuan{
+						position: relative;
+						
+					}
+				</style>
+				<a>1099元<span class="removemoney">1499</span><p class="yuan" style="position:relative;top: 112px;left:465px;display: inline">元</p></a>
+			</p>
+			<p class="hedazi">总计：1099元</p>
+		</div>
+		<div id="gouwu">
+			<h3><p><a href="">加入购物车</a></p></h3>
+		</div>
+		<div id="shoucang">
+			<h2><p><a href="">收藏</a></p></h2>
+		</div>
+		<div id="fangshi">
+			<img src="./img/截图 2018-11-07 09.52.14.png"/>
+			<a>小米自营</a>
+		</div>
+		<div id="fangshi2">
+			<img src="./img/截图 2018-11-07 09.52.14.png"/>
+			<a>小米发货</a>
+		</div>
+		<div id="fangshi3">
+			<img src="./img/截图 2018-11-07 09.52.14.png"/>
+			<a>七天无理由退货</a>
+		</div>
+		<div id="fangshi4">
+			<img src="./img/截图 2018-11-07 09.52.14.png"/>
+			<a>运费说明</a>
+		</div>
+		<div id="fangshi5">
+			<img src="./img/截图 2018-11-07 09.52.14.png"/>
+			<a>售后服务政策</a>
+		</div>
+		<div id="dierhe">
+			<div id="xiao">
+				<h1>小米承诺
+				<a href="">查看详情
+				<img src="./img/截图 2018-11-07 10.31.36.png"/></a></h1>
+			</div>
+			<div class="xingtu">
+				<img src="./img/a9.png"/>
+				<p>
+					如因质量问题或故障，凭厂商维修中心或特约维修点的质量检测证明，享受7日
+					内退货，15日内换货，15日以上在质保期内享受免费保修等三包服务！</p>
+			</div>
+			<div id="xiao2">
+				<h1><span>官方</span>微信</h1>
+			</div>
+			<div class="xingtu2">
+				<img src="./img/efb.jpg"/>
+			</div>
+		</div>
+		</div>
+		<div id="zhong">
+			<div id="zhong1">
+				<p>
+				<img src="./img/截图 2018-11-03 12.08.41.png"/>
+				<a href="">&nbsp;&nbsp;预约维修服务&nbsp;&nbsp;</a>
+				<img src="./img/7.png"/>
+				<a href="">&nbsp;&nbsp;七天无理由退货&nbsp;&nbsp;</a>
+				<img src="./img/15.png"/>
+				<a href="">&nbsp;&nbsp;15天免费换货&nbsp;&nbsp;</a>
+				<img src="./img/截图 2018-11-03 12.13.30.png"/>
+				<a href="">&nbsp;&nbsp;满150元包邮&nbsp;&nbsp;</a>
+				<img src="./img/标点.png"/>
+				<a href="">&nbsp;&nbsp;520余家售后网点&nbsp;&nbsp;</a>
+				</p>
+			</div>
+		</div>
+		<div id="zuiwei">
+				<img src="./img/mi.jpg"/>
+				<p>
+					<a href="">&copy;mi.com</a>&nbsp;&nbsp;
+					<a href="">京ICP证110507号</a>&nbsp;&nbsp;
+					<a href="">京ICP备10046444号</a>&nbsp;&nbsp;<a href="">京公网安备11010802020134号</a>&nbsp;&nbsp;<a href="">京网文[2017]1530-131号</a>
+				</p>
+				<p>
+					<a href="">(京)网械平台备字(2018)第00005号</a>&nbsp;&nbsp;
+					<a href="">互联网药品信息服务资格证(京)-非经营性-204-0090</a>&nbsp;&nbsp;
+					<a href="">营业执照</a>&nbsp;&nbsp;
+					<a href="">医疗器械公告</a>
+				</p>
+				<p>
+					本网站所列数据，纯属模仿
+				</p>
+		</div>
+	</body>
+</html>

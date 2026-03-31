@@ -1,0 +1,1508 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title></title>
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js">
+	</script>
+	<link rel="stylesheet" type="text/css" media="screen" href="./css/style.css" />
+	<link rel="stylesheet" type="text/css" media="screen" href="./css/my.css" />
+	<style type="text/css">
+		body{
+
+		}
+		*{
+			padding: 0;
+			margin: 0;
+			list-style: none;
+		}
+		.t1 img{
+			width: 1226px;
+			height: 460px;
+		}
+		.s1{
+			width: 1226px;
+			height: 860px;
+			margin: 50px auto;
+		}
+		.t1 li{
+			position: absolute;
+			top: 0;
+			left: 0;
+			display: none;
+		}
+		.t2 li{
+			width: 20px;
+			height: 20px;
+			background: white;
+			font-size: 14px;
+			border-radius: 50%;
+			text-align: center;
+			display: inline-block;
+			cursor: pointer;
+		}
+		.t2 li.active{
+			background-color: chocolate;
+		}
+
+		.s1 .anniu{
+			width: 30px;
+			height: 60px;
+			background: rgba(0, 0, 0, 0.3);
+			color: white;
+			font-size: 14px;
+			text-align: center;
+			line-height: 60px;
+			position: absolute;
+			top: 50%;
+			margin-top: -30px;
+			cursor: pointer;
+		}
+		.s1 .left{
+			left: 0;
+		}
+		.s1 .right{
+			right: 0;
+		}
+
+
+		#one{
+			line-height: 50px;
+			border-top: 1px lightgray solid;
+		}
+		#one a{
+			color: black;
+			text-decoration: none;
+			font-size: 12px;
+		}
+		#one p a:hover{
+			color: orange;
+		}
+		#one p{
+			text-indent: 6em;
+		}
+		#one1{
+			background: orange;
+			opacity: 0.8;
+			font-size: 12px;
+			line-height: 30px;
+			width: 100px;
+			text-align: center;
+		}
+		#one1{
+			color: white;
+			font-weight: bold;
+			position: relative;
+			left: 1205px;
+			top: -40px;
+		}
+		#one1:hover{
+			background: darkorange;
+		}
+		#s1{
+			opacity: 0.3;
+		}
+		#s2{
+			position: relative;
+			left: 550px;
+		}
+
+		.s1{
+			position: relative;
+			bottom: 70px;
+		}
+		#three img{
+			position: relative;
+			bottom: 100px;
+		}
+		#three p{
+			position: relative;
+			z-index: 2;
+			color: white;
+		}
+		hr{
+			position: relative;
+			bottom: 80px;
+		}
+		#three #t1{
+			font-size: 26px;
+			position: relative;
+			left: 570px;
+		}
+		#three #badai{
+			color: red;
+			font-size: 25px;
+			border: 3px red solid;
+			position: relative;
+			left: 570px;
+		}
+		#three #t2{
+			font-size: 50px;
+			font-weight: bolder;
+			position: relative;
+			left: 250px;
+			top: 70px;
+		}
+		#three #t3{
+			font-size: 20px;
+			position: relative;
+			left: 20px;
+			top: 130px;
+			color: red;
+		}
+		#three #t4{
+			color: white;
+			position: relative;
+			top: -200px;
+			left: 300px;
+		}
+		#three #t5{
+			position: relative;
+			left: 330px;
+		}
+		#four{
+			position: relative;
+			top: -170px;
+		}
+		#five{
+			position: relative;
+			top: -175px;
+		}
+		#five p{
+			color: white;
+		}
+		#five #s1{
+			position: relative;
+			left: 270px;
+			top: -280px;
+			border-bottom: 5px red solid;
+		}
+		#five #p1{
+			position: relative;
+			left: 270px;
+			top: -260px;
+		}
+		#five #s2{
+			position: relative;
+			left: 620px;
+			top: -425px;
+			border-bottom: 5px #570F20 solid;
+		}
+		#five #p2{
+			position: relative;
+			left: 620px;
+			top: -405px;
+		}
+		#five #s3{
+			position: relative;
+			left: 970px;
+			top: -570px;
+			border-bottom: 5px #570F20 solid;
+		}
+		#five #p3{
+			position: relative;
+			left: 970px;
+			top: -550px;
+		}
+		#six{
+			position: relative;
+			top: -630px;
+		}
+		#seven{
+			color: white;
+			background: black;
+			position: relative;
+			top: -640px;
+		}
+		#seven #seven1{
+			position: relative;
+			left: 360px;
+		}
+		#seven #xs1{
+			border-bottom: 10px red solid;
+			position: relative;
+			top: -10px;
+		}
+		#seven #x1{
+			font-size: 25px;
+			font-weight: bold;
+		}
+		#seven p{
+			font-size: 18px;
+			line-height: 30px;
+		}
+		#seven #xs2{
+			border-bottom: 10px #525252 solid;
+			position: relative;
+			top: -10px;
+		}
+		#seven #seven-span{
+			opacity: 0.4;
+		}
+		#seven #seven-p1{
+			font-size: 20px;
+			font-weight: bold;
+		}
+		#seven #seven-p2{
+			font-size: 20px;
+			font-weight: bold;
+			position: relative;
+			left: 380px;
+			top: -150px;
+		}
+		#eight{
+			position: relative;
+			top: -730px;
+		}
+		#nine{
+			color: white;
+			position: relative;
+			top: -1650px;
+		}
+		#nine #nc1{
+			font-size: 30px;
+			font-weight: bold;
+		}
+		#nine center{
+			line-height: 35px;
+		}
+		#ten{
+			background: black;
+			height: 270px;
+			position: relative;
+			top: -1100px;
+		}
+		#eleven{
+			position: relative;
+			top: -1100px;
+		}
+		#hb1{
+			text-align: center;
+			line-height: 30px;
+			color: white;
+			position: relative;
+			left: 290px;
+			top: 120px;
+		}
+		#hb2{
+			text-align: center;
+			line-height: 30px;
+			color: white;
+			position: relative;
+			left: 290px;
+			top: 120px;
+		}
+		#hb3{
+			text-align: center;
+			line-height: 30px;
+			color: white;
+			position: relative;
+			left: 290px;
+			top: 120px;
+		}
+		#twelve{
+			color: white;
+			position: relative;
+			top: -1105px;
+		}
+		#twelve #onetwo{
+			position: relative;
+			top: -790px;
+			left: 360px;
+		}
+		#twelve #onetwo #top{
+			font-size: 30px;
+		}
+		#twelve #onetwo #top2{
+			line-height: 30px;
+		}
+		#tos{
+			font-weight: bold;
+			font-size: 28px;
+		}
+		#twelve #onetwo #top3{
+			position: relative;
+			top: -138px;
+			left: 165px;
+		}
+		#onethree{
+			position: relative;
+			top: -1600px;
+			color: white;
+		}
+		#onethree p{
+			font-size: 25px;
+		}
+		#onethree #otc1{
+			position: relative;
+			top: -1030px;
+		}
+		#onethree #ots1{
+			font-size: 30px;
+		}
+		#otd1{
+			position: absolute;
+			top: 800px;
+			left: 450px;
+		}
+		#otd1 span{
+			border-bottom: 7px #CE0606 solid;
+		}
+		#otd2{
+			position: relative;
+			top: -255px;
+			left: 370px;
+		}
+		#onefour{
+			color: white;
+			width: 100%;
+			background: black;
+			position: relative;
+			top: -1800px;
+		}
+		#onefour p{
+			line-height: 80px;
+		}
+		#ofc{
+			font-size: 30px;
+		}
+		#ofv{
+			position: relative;
+			left: 350px;
+		}
+		#ofs{
+			border-bottom: 8px red solid;
+		}
+		#onefour #ofd{
+			position: relative;
+			top: 80px;
+			left: 200px;
+		}
+		#onefour #ofd2{
+			position: relative;
+			top: -182px;
+			left: 600px;
+		}
+		#onefour #ofd3{
+			position: relative;
+			top: -444px;
+			left: 1000px;
+		}
+		#onefive{
+			position: relative;
+			top: -2110px;
+			z-index: 1;
+		}
+		#onesix{
+			position: relative;
+			top: -2115px;
+		}
+		#oxp{
+			color: white;
+			font-size: 20px;
+			position: relative;
+			top: -1420px;
+			left: 390px;
+		}
+		#oxs{
+			font-size: 40px;
+			font-weight: bold;
+		}
+		#oneseven{
+			position: relative;
+			top: -2250.9px;
+		}
+		#oneeight{
+			position: relative;
+			top: -2255px;
+		}
+		#onenine{
+			position: relative;
+			top: -2260px;
+			color: white;
+		}
+		#onenine #ons{
+			border-bottom: 8px red solid;
+		}
+		#onenine #onp{
+			line-height: 80px;
+			font-size: 30px;
+		}
+		#onenine #ond1{
+			position: relative;
+			top: -430px;
+			left: 380px;
+		}
+		#onenine #ond2{
+			position: relative;
+			top: -775.5px;
+			left: 960px;
+		}
+		#onenine ul li{
+			font-size: 18px;
+			line-height: 35px;
+		}
+		#twenty{
+			height: 300px;
+			background: black;
+			font-weight: bold;
+			position: relative;
+			top: -3000px;
+		}
+		#twenty-one{
+			background: black;
+			height: 700px;
+			position: relative;
+			top: -3100px;
+		}
+		#twenty-one p{
+			text-align: center;
+			color: white;
+			font-size: 40px;
+			position: relative;
+			top: -400px;
+		}
+		#twenty-two{
+			width: 100%;
+			height: 500px;
+			background: black;
+			position: relative;
+			top: -3200px;
+		}
+		#twenty-two a{
+			font-size: 20px;
+			color: crimson;
+			text-decoration: none;
+			border: 3px crimson solid;
+		}
+		#twenty-two ul li{
+			line-height: 30px;
+		}
+		#tt1{
+			position: relative;
+			left: 130px;
+			height: 400px;
+			width: 306px;
+			color: white;
+			background-color: #111112;
+		}
+		#tt2{
+			position: relative;
+			left: 450px;
+			top: -400px;
+			height: 400px;
+			width: 306px;
+			color: white;
+			background-color: #111112;
+		}#tt3{
+			 position: relative;
+			 left: 770px;
+			 top: -800px;
+			 height: 400px;
+			 width: 306px;
+			 color: white;
+			 background-color: #111112;
+		 }
+		#tt4{
+			position: relative;
+			left: 1090px;
+			top: -1200px;
+			height: 400px;
+			width: 306px;
+			color: white;
+			background-color: #111112;
+		}
+		#twenty-two #shu{
+			color: red;
+			font-weight: bold;
+			font-size: 28px;
+		}
+		#twenty-two #zi{
+			color: red;
+		}
+		#twenty-three{
+			height: 500px;
+			width: 100%;
+			background: black;
+			position: relative;
+			top: -3200px;
+			line-height: 30px;
+			font-size: 15px;
+			color: dimgrey;
+		}
+		#twenty-three p{
+			position: relative;
+			left: 20px;
+		}
+
+		#zui{
+			width: 100%;
+			height: 300px;
+			display: block;
+			position: relative;
+			left: 200px;
+			top: -3100px;
+		}
+		#zui img{
+			width: 150px;
+			height: 150px;
+		}
+
+		#zui div span a{
+			text-decoration: none;
+		}
+		.jiange{
+			position: relative;
+			left: 170px;
+			bottom: 150px;
+		}
+		#zui div a{
+			text-decoration: none;
+			color: #000000;
+		}
+		#zui p a{
+			line-height: 50px;
+			text-decoration: none;
+			color: #000000;
+			opacity: 0.6;
+		}
+		#zui p{
+			position: relative;
+			left: 170px;
+			bottom: 150px;
+			display: block;
+		}
+		#zui p a:hover{
+			color: orange;
+		}
+		#zui div a:hover{
+			color: orange;
+		}
+		#tt1 a:hover{
+			color: white;
+			background: crimson;
+		}
+		#tt2 a:hover{
+			color: white;
+			background: crimson;
+		}
+		#tt3 a:hover{
+			color: white;
+			background: crimson;
+		}
+		#tt4 a:hover{
+			color: white;
+			background: crimson;
+		}
+	</style>
+</head>
+<body>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$("#img1").hide();
+	})
+	$(document).ready(function(){
+		$(".click1").click(function(){
+			$("#img1").slideToggle();
+		})
+	});
+</script>
+<!-- 导航栏 -->
+
+<div class="dingbu">
+	<a href="index.html">小米商城</a>
+	<a href="#">MIUI</a>
+	<a href="#">loT</a>
+	<a href="#">云服务</a>
+	<a href="#">金融</a>
+	<a href="#">有品</a>
+	<a href="#">小爱开放平台</a>
+	<a href="#">政企服务</a>
+	<a href="#">下载APP</a>
+	<a href="#">Select Region</a>
+	<style type="text/css">
+		#dingbu-s2{
+			display:inline-block;
+			position: relative;
+			left: 380px;
+		}
+	</style>
+	<div id="dingbu-s2">
+		<a href="login.html" class="dengLu">登陆</a>
+		<a href="register.html" class="zhuche">注册</a>
+		<a href="#" class="xiaoxi">销售通知</a>
+	</div>                </div>
+
+<div class="list-1">
+	<ul class="list-ul-2">
+		<li><img src="img/timg.jpg" width="55px" height="55px" class="img-logo"/></li>
+		<li><a href="#">全部商品分类</a></li>
+		<li><a href="#" class="click1">小米手机</a></li>
+		<li><a href="#">红米</a></li>
+		<li><a href="tv4c.html">电视</a></li>
+		<li><a href="#">笔记本</a></li>
+		<li><a href="#">空调</a></li>
+		<li><a href="#">新品</a></li>
+		<li><a href="#">路由器</a></li>
+		<li><a href="#">智能硬件</a></li>
+		<li><a href="#">服务</a></li>
+		<li><a href="#">社区</a></li>
+	</ul>
+</div>
+<div id="img1" style="z-index: 999; display: inline; background-color: white;">
+	<ul>
+		<li>
+			<div id="img1-1" style="background-color: white;">
+				<a href="MIX3.html" style="text-decoration: none;">
+					<img src="img/mix3-320.png" width="130px" height="100px"/>
+					<center>
+						<p style="font-size: 12px; color: #000000;">小米MIX3</p>
+						<p style="font-size: 11px; color: #FFA500;">3299元起</p>
+					</center>
+				</a>
+			</div>
+		</li>
+		<li>
+			<div id="img1-2" style="background-color: white;">
+
+				<a href="#" style="text-decoration: none;"><img src="img/pc-320-220-mi8.png" width="130px" height="100px"/>
+					<center>
+						<p style="font-size: 12px;">小米8 青春版</p>
+						<p style="font-size: 11px; color: #FFA500;">1399元起</p>
+					</center>
+				</a>
+			</div>
+		</li>
+		<li>
+			<div id="img1-3" style="background-color: white;">
+				<a href="mi8.html" style="text-decoration: none;"><img src="img/pingmu-320.png" width="130px" height="100px"/>
+					<center>
+						<p style="font-size: 12px;">小米8 屏幕指纹版</p>
+						<p style="font-size: 11px; color: #FFA500;">3199元起</p>
+					</center>
+				</a>
+			</div>
+		</li>
+		<li>
+			<div id="img1-4" style="background-color: white;">
+				<a href="#" style="text-decoration: none;"><img src="img/qingchun-320.png" width="130px" height="100px"/>
+					<center>
+						<p style="font-size: 12px;">小米8</p>
+						<p style="font-size: 11px; color: #FFA500;">2699元起</p>
+					</center>
+				</a>
+			</div>
+		</li>
+	</ul>
+</div>
+
+
+
+<div id="one">
+	<p>
+		小米游戏本
+		<span >&nbsp;|&nbsp;</span>
+		<a href="#"> Pro 15.6" GTX版</a>
+		<span >&nbsp;|&nbsp;</span>
+		<a href="#"> Air 13.3"四核增强版</a>
+		<span >
+				<a href="#">概述</a>
+				<span >&nbsp;|&nbsp;</span>
+				<a href="#">参数</a>
+				<span >&nbsp;|&nbsp;</span>
+				<a href="#">F码通道</a>
+				<span >&nbsp;|&nbsp;</span>
+				<a href="#">用户评价</a>
+				</span>
+	</p>
+	<a href="#">
+		<div id="one1">
+			立即购买
+		</div></a>
+</div>
+
+
+<div id="three">
+	<p>
+		<span id="t1">小米游戏本</span>
+		<span id="badai">八代增强版</span>
+		<span id="t2">电竞级性能怪兽</span>
+		<span id="t3">6499元起</span>
+	</p>
+	<img src="img/banner.jpg" height="100%" width="100%"/>
+	<span id="t4">
+    		让你在游戏的世界里恣意闯荡，亦可在游戏之外更加专注极致地创作，这是我们的初衷。为此，我们邀请多
+    		<br />
+    		领域的业内专家，从配置、散热，到键盘、屏幕、音效等进行了系统级的重塑，历经两年，终于将这款小米
+    		<br />
+    		<span id="t5">游戏本呈现给你。</span>
+    		</span>
+</div>
+<div id="four">
+	<video width="100%" height=""  autoplay="autoplay"   loop="loop" >
+		<source src="img/jieshao.mp4" type="video/mp4"></source>
+		<source src="img/jieshao.mp4" type="video/ogg"></source>
+		<source src="img/jieshao.mp4" type="video/webm"></source>
+		当前浏览器不支持 video直接播放，点击这里下载视频： <a href="myvideo.webm">下载视频</a>
+	</video>
+</div>
+<div id="five">
+	<img src="img/card_01.jpg" width="100%"/>
+	<p>
+		<span id="s1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+		<br />
+	<p id="p1">
+		冷酷的性能怪兽
+		<br />
+		<br />
+		第八代英特尔® 酷睿™ 标压处理器
+		<br />
+		NVIDIA® GeForce® GTX 1060
+		<br />
+		创新的「 冷酷 」散热系统
+		<br />
+		最高支持16GB DDR4 2666MHz 内存
+	</p>
+	<p>
+		<span id="s2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+		<br />
+	<p id="p2">
+		信仰级的游戏体验
+		<br />
+		<br />
+		72% NTSC 防眩光高清屏幕
+		<br />
+		杜比全景声+Hi-Res Audio认证
+		<br />
+		1.8mm 高键程 专业游戏键盘
+		<br />
+		「光剑」氛围灯，炫彩背光键盘
+	</p>
+	<p>
+		<span id="s3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+		<br />
+	<p id="p3">
+		一面游戏，一面工作
+		<br />
+		<br />
+		金属上盖 极简设计
+		<br />
+		大满贯10大接口
+		<br />
+		256GB PCIe SSD + 1TB 机械硬盘
+		<br />
+		可连接 2 台 4K 显示器
+	</p>
+</div>
+<div id="six">
+	<img src="img/card_02.jpg" width="100%"/>
+</div>
+<div id="seven">
+	<div id="seven1">
+		<img src="img/CPU.jpg"/>
+		<br />
+		<br />
+		<span >
+    		电竞级装备
+    		<br />
+    		全新第八代英特尔® 酷睿™ 六核标压处理器
+    	</span>
+		<br />
+		<br />
+		<p>
+			最高采用全新第八代酷睿™ i7 H系列处理器，相较第七代标压处理器，多核计算性能提
+			<br />
+			升60%。
+			<br />
+			无论是Office办公、设计 应用亦或游戏联机对战，更强大的内芯都将带来飞跃性的体验
+			<br />
+			升级。
+			<br />
+			<br />
+			第八代英特尔®酷睿™标压处理器多核计算性能
+		</p>
+		<span >
+    	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    	</span>
+		<br />
+		<br />
+		<p>
+			第七代英特尔®酷睿™标压处理器多核计算性能
+		</p>
+		<span id="xs2">
+    	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    	</span>
+		<br />
+		<br />
+		<br />
+		<br />
+		<span id="seven-span">* 小米笔记本实验室基于 Cinebench R15 测试结果。</span>
+		<br />
+		<br />
+		<br />
+		<br />
+
+		<img src="img/GPU.jpg"/>
+		<br />
+		<br />
+		<span id="x1">
+    		GeForce® GTX 1060 6GB 独显
+    	</span>
+		<br />
+		<br />
+		<p>
+			强悍的 GeForce® GTX10 系列显卡，助你轻松畅玩大型游戏，真正的玩家一上手便提
+			<br />
+			知。
+			<br />
+			<br />
+			GeForce® GTX 1060 性能
+		</p>
+		<span id="xs1">
+    	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    	</span>
+		<br />
+		<br />
+		<p>
+			GeForce® GTX 970M 性能
+		</p>
+		<span >
+    	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    	</span>
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<p id="seven-p1">
+			酷睿™ i7-8750H
+			<br />
+			第八代英特尔® 六核处理器
+			<br />
+			<br />
+			16GB DDR4 2666MHz 内存
+			<br />
+			可升级双内存槽
+		</p>
+		<p id="seven-p2">
+			GeForce® GTX 1060
+			<br />
+			6GB显存
+			<br />
+			<br />
+			256GB PCIe SSD+1TB 机械硬盘
+			<br />
+			支持双 PCIe SSD 模式
+		</p>
+	</div>
+</div>
+<div id="eight">
+	<img src="img/curve_bg.jpg" width="100%"/>
+</div>
+
+
+<style type="text/css">
+	.t1 video{
+		position: relative;
+		left: 300px;
+		top: 200px;
+	}
+	.s1{
+		width: 100%;
+		background-color:black;
+	}
+</style>
+
+
+
+<div class="s1" style="position: relative;bottom: 785px;">
+	<div class="t1" style="position: relative;">
+		<ul>
+			<li><a href="#">
+				<video width="800" height="" autoplay="autoplay" loop="loop">
+					<source src="img/sanre1.mp4" type="video/mp4"></source>
+				</video>
+			</a>
+				<p id="hb1">
+					「 速冷」冷却系统
+					<br />
+					从热力学角度重塑热量释放的每个环节：内置3+2大直径加粗热管和包围
+					<br />
+					式创新布局，能将核心或关键发热单元热量迅速传递至风扇区，独特S形
+					<br />
+					涡轮金属扇叶和12V驱动马达，迅速将热量释放到机身外。
+				</p>
+			</li>
+			<li><a href="#">
+				<video width="800" height="" autoplay="autoplay" loop="loop">
+					<source src="img/sanre2.mp4" type="video/mp4"></source>
+				</video>
+			</a>
+				<p id="hb2">
+					<br />
+					大排量四出风口设计
+					<br />
+					外扩式结构，将散热面积增加了50%；四出风口创新设计，开辟更多热
+					<br />
+					量出口，高效散热。
+				</p>
+				<p>
+
+				</p>
+			</li>
+			<li><a href="#">
+				<video width="800" height="" autoplay="autoplay" loop="loop">
+					<source src="img/sanre3.mp4" type="video/mp4"></source>
+				</video>
+			</a>
+				<p id="hb3">
+					<br />
+					不锈钢超大进风格栅
+					<br />
+					为了更大的进风量，我们重构了进风区，使用了更结实更昂贵的不锈钢
+					<br />
+					进风板，并将开孔率提升到46%，同时，材质相对铝合金，刚度提升2
+					<br />
+					倍。
+				</p>
+			</li>
+		</ul>
+	</div>
+
+	<div class="anniu left">
+		<img src="img/jt2.jpg" width="80"/>
+	</div>
+	<div class="anniu right">
+		<img src="img/jt.jpg" width="80" style="position: relative; left: -50px;"/>
+	</div>
+</div>
+
+
+<script>
+	//			轮播开始
+	$(function(){
+		//初始化，设置第一个出现的图片和触碰点
+		$(".t1 li").first().show();
+		$(".t2 li").first().addClass("active");
+//鼠标悬停事件，排斥其他按钮
+		$(".t2 li").mouseover(function(){
+			//悬停时
+			$(this).addClass("active").siblings("li").removeClass("active");
+			var index=$(this).index();//获取索引
+
+			i=index;
+
+			$(".t1 li").eq(index).fadeIn().siblings("li").fadeOut();//筛选淡入其余淡出
+		})
+//定时自动 setInterval(所执行方法函数，毫秒)
+//所设定时间为2000毫秒,即2秒一次
+		var i=0;
+//   var t = setInterval(move,2000);
+
+		function move(){//一次定义函数多次使用
+			i++;
+			if(i==3){
+				i=0;//判断循环到四张图的时候回到第一图重新播放
+			}
+			$(".t2 li").eq(i).addClass("active").siblings("li").removeClass("active");
+			$(".t1 li").eq(i).fadeIn().siblings().fadeOut();//筛选淡入
+		}
+
+		function moveleft(){//一次定义函数多次使用(向左的滑板)
+			i--;
+			if(i==-1){
+				i=2;//判断循环到四张图的时候回到第一图重新播放
+			}
+			$(".t2 li").eq(i).addClass("active").siblings("li").removeClass("active");
+			$(".t1 li").eq(i).fadeIn().siblings().fadeOut();//筛选淡入
+		}
+
+
+
+
+//点击右边箭头进行移动执行动画
+		$(".s1 .right").click(function(){
+			move();
+		})
+//点击左边箭头执行的动画
+		$(".s1 .left").click(function(){
+			moveleft();
+		})
+	})
+</script>
+<div id="nine">
+	<center id="nc1">冷酷到底的散热系统</center>
+	<br />
+	<br />
+	<center>
+		普通玩家看配置，高级玩家看散热。对我们而言，散热系统不仅是为了散热，而
+		<br />
+		且能激发性能最佳表现。从进风区、热量冷却系统到排放系统，我们全面突破，
+		<br />
+		让小米游戏本整机散热效率提升 60%。
+	</center>
+</div>
+<div id="ten">
+	<center><img src="img/icon_pic.png" /></center>
+</div>
+<div id="eleven">
+	<img src="img/card_03.jpg" width="100%"/>
+</div>
+<div id="twelve">
+	<img src="img/screen.jpg" width="100%"/>
+	<div id="onetwo">
+		<p id="top">
+			用专业级显示屏打游戏
+			<br />
+			15.6"窄边框全高清屏
+		</p>
+		<br />
+		<p id="top2">
+			专业的高清屏，令你看清游戏世界的更多真相。震撼的游戏
+			<br />
+			体验之外，你还能用它创造更多展现你实力的作品。
+		</p>
+		<br />
+		<br />
+		<span >
+					72
+				</span>
+		%
+		<br />
+		NTSC色域
+		<br />
+		<br />
+		<span >
+					178°
+				</span>
+		<br />
+		广视角
+		<p id="top3">
+					<span id="tos">
+					81
+				</span>
+			%
+			<br />
+			高屏占比
+			<br />
+			<br />
+			<span >
+					防眩光
+				</span>
+			<br />
+			高精细，强光下亦清晰
+		</p>
+	</div>
+</div>
+<div id="onethree">
+	<img src="img/sound.jpg" width="100%"/>
+	<center id="otc1">
+				<span id="ots1">
+				高推力耳机放大器，耳听八方
+				<br />
+				杜比全景声游戏加强款
+				</span>
+		<br />
+		<br />
+		你能听到飞机从你的头顶飞过，枪声响起时，甚至知道敌人在几点钟方向…这就是杜比全景声
+		<br />
+		「游戏加强款」的神奇之处。不仅如此，小米游戏本整机音效还通过日本 Hi-Res Audio 权威认证。
+		<br />
+		戴上耳机，感觉瞬间被拉进游戏世界。
+	</center>
+	<div id="otd1">
+				<span >
+					&nbsp;&nbsp;&nbsp;&nbsp;
+					&nbsp;&nbsp;&nbsp;&nbsp;
+					&nbsp;&nbsp;
+				</span>
+		<br />
+		<br />
+		<p>
+			杜比全景声-游戏加强款
+		</p>
+		<br />
+		<br />
+		<br />
+		<span >
+					&nbsp;&nbsp;&nbsp;&nbsp;
+					&nbsp;&nbsp;&nbsp;&nbsp;
+					&nbsp;&nbsp;
+				</span>
+		<br />
+		<br />
+		<p>
+			高推力耳机放大器
+			<br />
+			发挥专业游戏音效
+		</p>
+		<div id="otd2">
+					<span style="position: relative; top: 10px;">
+						<span>
+					&nbsp;&nbsp;&nbsp;&nbsp;
+					&nbsp;&nbsp;&nbsp;&nbsp;
+					&nbsp;&nbsp;
+				</span>
+				<br />
+				<br />
+				<p>
+					Hi-Res Audio
+					<br />
+					高品质音频标准认证
+				</p>
+					</span>
+			<br />
+			<br />
+			<span id="otds">
+					&nbsp;&nbsp;&nbsp;&nbsp;
+					&nbsp;&nbsp;&nbsp;&nbsp;
+					&nbsp;&nbsp;
+				</span>
+			<br />
+			<br />
+			<p>
+				2个3W 大功率扬声器
+				<br />
+				高保真外放音质
+			</p>
+		</div>
+	</div>
+</div>
+
+<div id="onefour">
+	<center id="ofc">
+		4分区炫彩背光键盘
+		<br />
+		弹跳起落，皆是专业游戏键盘触感
+	</center>
+	<br />
+	<br />
+	<video width="800" id="ofv" autoplay="autoplay" loop="loop">
+		<source src="img/jp6.mp4" type="video/mp4"></source>
+		<source src="img/jp6.mp4" type="video/ogg"></source>
+		<source src="img/jp6.mp4" type="video/webm"></source>
+	</video>
+	<br />
+	<div id="ofd">
+				<span >
+					&nbsp;&nbsp;&nbsp;&nbsp;
+					&nbsp;&nbsp;&nbsp;&nbsp;
+					&nbsp;&nbsp;&nbsp;&nbsp;
+					&nbsp;&nbsp;
+				</span>
+		<br />
+		<p>1.8mm 高键程，双曲面键帽</p>
+		<video width="280" height="" autoplay="autoplay" loop="loop">
+			<source src="img/jp1.mp4" type="video/mp4"></source>
+			<source src="img/jp1.mp4" type="video/ogg"></source>
+			<source src="img/jp1.mp4" type="video/webm"></source>
+		</video>
+	</div>
+	<div id="ofd2">
+				<span id="ofs">
+					&nbsp;&nbsp;&nbsp;&nbsp;
+					&nbsp;&nbsp;&nbsp;&nbsp;
+					&nbsp;&nbsp;&nbsp;&nbsp;
+					&nbsp;&nbsp;
+				</span>
+		<br />
+		<p>30键防冲突设计，精准连招释放</p>
+		<video width="280" height="" autoplay="autoplay" loop="loop">
+			<source src="img/jp2.mp4" type="video/mp4"></source>
+			<source src="img/jp2.mp4" type="video/ogg"></source>
+			<source src="img/jp2.mp4" type="video/webm"></source>
+		</video>
+	</div>
+	<div id="ofd3">
+				<span >
+					&nbsp;&nbsp;&nbsp;&nbsp;
+					&nbsp;&nbsp;&nbsp;&nbsp;
+					&nbsp;&nbsp;&nbsp;&nbsp;
+					&nbsp;&nbsp;
+				</span>
+		<br />
+		<p>5个可编程按键，专业键盘布局</p>
+		<video width="280" height="170" autoplay="autoplay" loop="loop">
+			<source src="img/jp3.mp4" type="video/mp4"></source>
+			<source src="img/jp3.mp4" type="video/ogg"></source>
+			<source src="img/jp3.mp4" type="video/webm"></source>
+		</video>
+	</div>
+</div>
+<div id="onefive">
+	<img src="img/gameAndWork_new.jpg" width="100%"/>
+</div>
+<div id="onesix">
+	<img src="img/api.jpg" width="100%"/>
+	<p id="oxp">
+		<span id="oxs">大满贯接口，胜任专业工作需求</span>
+		<br />
+		<br />
+		这是一款能带去上班的游戏本，它不仅外形低调，还配备了工作中
+		<br />
+		各种常用接口。它们合理排布于机身，方便使用与插拔
+	</p>
+</div>
+<div id="oneseven">
+	<img src="img/4k_new.jpg" width="100%"/>
+</div>
+<div id="oneeight">
+	<img src="img/design.jpg" width="100%"/>
+</div>
+<div id="onenine">
+	<img src="img/rpg.jpg" width="100%"/>
+	<div id="ond1">
+					<span id="ons">
+					&nbsp;&nbsp;&nbsp;&nbsp;
+					&nbsp;&nbsp;&nbsp;&nbsp;
+					&nbsp;&nbsp;
+				</span>
+		<br />
+		<span >专业级全能高手</span>
+		<br />
+		<ul>
+			<li>15.6" 窄边全高清屏</li>
+			<li>强劲性能，支持外接 2 个 4K 显示器</li>
+			<li>1TB 机械硬盘，存储更多资料</li>
+			<li>10 个大满贯接口</li>
+			<li>极简造型，无 Logo 设计</li>
+			<li>玻璃触控板，多手势操控</li>
+			<li>Hi-Res Audio 高品质音频认证</li>
+		</ul>
+	</div>
+
+	<div id="ond2">
+					<span >
+					&nbsp;&nbsp;&nbsp;&nbsp;
+					&nbsp;&nbsp;&nbsp;&nbsp;
+					&nbsp;&nbsp;
+				</span>
+		<br />
+		<span id="onp">电竞级游戏高手</span>
+		<br />
+		<ul>
+			<li>第八代酷睿™ i7 标压处理器</li>
+			<li>NVIDIA® GeForce® GTX 1060</li>
+			<li>冷酷到底的散热系统</li>
+			<li>72% NTSC 防眩光全高清屏</li>
+			<li>16GB DDR4 2666MHz高速内存，可升级</li>
+			<li>256GB PCIe SSD+1TB 机械硬盘</li>
+			<li>四分区炫彩背光键盘、「光剑」氛围灯 </li>
+		</ul>
+	</div>
+</div>
+<div id="twenty">
+	<center>
+		<img src="img/soft.png" style="transform: scale(0.6); position: relative; top: 70px;"/>
+	</center>
+</div>
+<div id="twenty-one">
+	<center>
+		<img src="img/more.png" style="transform: scale(0.6); position: relative; top: 200px;"/>
+	</center>
+	<p>
+		总有一款更适合你的小米游戏本
+	</p>
+</div>
+<div id="twenty-two">
+	<div id="tt1">
+		<center>
+			<ul>
+				<br />
+				<br />
+				<br />
+				<li>NVIDIA® GeForce® GTX 1060</li>
+				<li>第八代英特尔® 酷睿™ i7标压处理器</li>
+				<li>16GB DDR4 2666MHz 内存</li>
+				<li>256GB PCIe SSD+1TB 机械硬盘</li>
+				<br />
+				<br />
+				<br />
+				<span >8999</span>
+				<span >元</span>
+				<br />
+				<br />
+				<li><a href="#" >&nbsp;立即购买&nbsp;</a></li>
+			</ul>
+		</center>
+	</div>
+
+	<div id="tt2">
+		<center>
+			<ul>
+				<br />
+				<br />
+				<br />
+				<li>NVIDIA® GeForce® GTX 1060</li>
+				<li>第八代英特尔® 酷睿™ i7标压处理器</li>
+				<li>16GB DDR4 2666MHz 内存</li>
+				<li>256GB PCIe SSD+1TB 机械硬盘</li>
+				<br />
+				<br />
+				<br />
+				<span >7999</span>
+				<span >元</span>
+				<br />
+				<br />
+				<li><a href="#" >&nbsp;立即购买&nbsp;</a></li>
+			</ul>
+		</center>
+	</div>
+
+	<div id="tt3">
+		<center>
+			<ul>
+				<br />
+				<br />
+				<br />
+				<li>NVIDIA® GeForce® GTX 1060</li>
+				<li>第八代英特尔® 酷睿™ i7标压处理器</li>
+				<li>16GB DDR4 2666MHz 内存</li>
+				<li>256GB PCIe SSD+1TB 机械硬盘</li>
+				<br />
+				<br />
+				<br />
+				<span id="shu">7499</span>
+				<span id="zi">元</span>
+				<br />
+				<br />
+				<li><a href="#" >&nbsp;立即购买&nbsp;</a></li>
+			</ul>
+		</center>
+	</div>
+
+	<div id="tt4">
+		<center>
+			<ul>
+				<br />
+				<br />
+				<br />
+				<li>NVIDIA® GeForce® GTX 1060</li>
+				<li>第八代英特尔® 酷睿™ i7标压处理器</li>
+				<li>16GB DDR4 2666MHz 内存</li>
+				<li>256GB PCIe SSD+1TB 机械硬盘</li>
+				<br />
+				<br />
+				<br />
+				<span >6699</span>
+				<span >元</span>
+				<br />
+				<br />
+				<li><a href="#" >&nbsp;立即购买&nbsp;</a></li>
+			</ul>
+		</center>
+	</div>
+</div>
+<div id="twenty-three">
+	<br />
+	<br />
+	<p>
+		本页产品的配置信息、主板及相关图片均以小米游戏本顶配版（i7/GTX1060/256GB）为主进行宣传，具体性能及数据根据型号不同存在差异，如需了解更多机型配置请查阅参数页。六核标压处理器特指第八代英特尔️ 酷
+		<br />
+		睿 i7-8750H，第八代英特尔️ 酷睿 i5-8300H是四核标压处理器，标压处理器是指相比移动低压处理器TDP 15W，标压处理器TDP为45W。CPU多核计算数据来自小米实验室，基于i7-8750H/GTX1060/16G配置，采用
+		<br />
+		Cinebench R15软件，对比小米游戏本i7-7700HQ/GTX1060/16G配置进行对比。四分区背光并不包括电源键。金属上盖并不包含天线槽。显卡对比数据出自NVIDIA官方数据。可升级双内存槽是指采用SO-DIMM内存模组设
+		<br />
+		计方案，支持内存模组更换升级。双SSD模式是指小米游戏本出厂预留第二个M.2 PCIe/SATA SSD卡位，可与机械硬盘位替换使用。整机散热效率提升60% 相比传统散热系统设计（塑胶扇叶、5V风扇驱动马达、双后出
+		<br />
+		风），小米游戏本（GTX 1060款）开启疾速模式后整体风流提升60%。12V驱动马达为小米游戏本1060款的风扇配置。对比小米笔记本Pro底面铝镁合金材质，进风格栅刚度提升2倍。进风格栅开孔率46%为不锈钢格栅开
+		<br />
+		孔面积对比（开孔+横梁面积总和）的占比。3+2大直径热管是指显卡芯片区共三根热管，CPU芯片区共两根热管。设计热传导能力提升25%是对比友商2+2式热管布局计算得到。 外扩散热增加50% 是对比传统游戏本散
+		<br />
+		热片面积计算得到。四出风口散热效率提升16% 对比三出风口设计计算得到。杜比全景声音效需通过佩戴耳机进行体验。可编程按键是指通过小米游戏盒子对5个宏按键进行快捷键、应用程序等功能设置。正面无Logo设
+		<br />
+		计特指正面表壳，笔记本屏幕及底壳含商标MI标志。整机厚度20.9mm，不包含底部不锈钢进风格栅及脚垫。屏幕、主板等为示意图，具体以实物为准。本页中的内存容量、尺寸厚度重量、屏幕开合角度等数据均为理论
+		<br />
+		值，实测中存在合理误差。UHS-I 104MB/s读卡器依据SD协会SDR104规格设计。产品站中非特别指出，均为我司实验室数据、设计技术参数及供应商提供数据，全站数据实际情况会因测试软件版本、具体测试环境、具
+		<br />
+		体版本不同，而略有差异。
+	</p>
+</div>
+
+<div id="zui">
+	<img src="img/timg.jpg"/>
+	<div class="jiange"><a href="">&nbsp;小米商城&nbsp;</a>|<a href="">&nbsp;MIUI&nbsp;</a>|<a href="">&nbsp;米家&nbsp;</a>|<a href="">&nbsp;米聊&nbsp;</a>|<a href="">&nbsp;多看&nbsp;</a>|<a href="">&nbsp;游戏&nbsp;</a>|<a href="">&nbsp;路由器&nbsp;</a>|<a href="">&nbsp;米粉卡&nbsp;</a>|<a href="">&nbsp;政企服务&nbsp;</a>|<a href="">&nbsp;小米天猫店&nbsp;</a>|<a href="">&nbsp;隐私政策&nbsp;</a>|<a href="">&nbsp;问题反馈&nbsp;</a>|<a href="">&nbsp;廉政举报&nbsp;</a>|<a href="">&nbsp;Select Region&nbsp;</a></div>
+	<p>
+		<a href="">&copy;<span>mi.com</span>京ICP证110507号</a>&nbsp
+		<a href="">京ICP备10046444号</a>&nbsp;<a href="">京公网安备11010802020134号</a>&nbsp;<a href="">京网文[2017]1530-131号</a>
+	</p>
+	<p>
+		<a href="">(京)网械平台备字(2018)第00005号</a>&nbsp;
+		<a href="">互联网药品信息服务资格证(京)-非经营性-204-0090</a>&nbsp;
+		<a href="">营业执照</a>&nbsp;
+		<a href="">医疗器械公告</a>
+	</p>
+</div>
+</body>
+</html>

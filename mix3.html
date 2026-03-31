@@ -1,0 +1,942 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>小米MIX3</title>
+		 <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="./js/jquery-3.1.1.min.js"></script>
+		<style type="text/css">
+			*{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+.t1 img{
+    width: 100%;
+    height: 800px;
+    position: relative;
+    right: 160px;
+    bottom: 180px;
+}
+.s1{
+    width:100%;
+    height: 460px;
+    margin: 50px auto;
+    position: relative;
+}
+.t1{
+	width: 100%;
+	}
+.t1 li{
+position: absolute;
+top: 0;
+left: 0;
+display: none;
+}
+.t2 li{
+    width: 20px;
+    height: 20px;
+    background: white;
+    font-size: 14px;
+    border-radius: 50%;
+    text-align: center;
+    display: inline-block;
+    cursor: pointer;
+}
+.t2 li.active{
+    background-color: chocolate;
+}
+.t2{
+    position: absolute;
+    bottom: 10px;
+    left:50%;
+}
+.s1 .anniu{
+    width: 30px;
+    height: 60px;
+    background: rgba(0, 0, 0, 0.3);
+    color: white;
+    font-size: 14px;
+    text-align: center;
+    line-height: 60px;
+    position: absolute;
+    top: 50%;
+    margin-top: -30px;
+    cursor: pointer;
+}
+.s1 .left{
+    left: 0;
+}
+.s1 .right{
+    right: 0;
+}
+			
+			
+		* {
+				padding: 0;
+				margin: 0 auto;
+			}
+			
+			body {
+				background: black;
+			}
+			
+			div {
+				background: black;
+				line-height: 40px;
+			}
+			
+			a {
+				color: white;
+				text-decoration: none;
+				position: relative;
+				font-size: 13px;
+				opacity: 0.5;
+				left: 150px;
+				padding: 6px;
+			}
+			
+			a:nth-child(1) {}
+			
+			a:hover {
+				opacity: 1;
+			}
+			
+			.dengLu {
+				position: relative;
+				left: 600px;
+			}
+			
+			.zhuche {
+				position: relative;
+				left: 600px;
+			}
+			
+			.xiaoxi {
+				position: relative;
+				left: 600px;
+			}
+			
+			h1 {
+				color: lightgoldenrodyellow;
+				text-align: center;
+			}
+			
+			h2 {
+				color: lightgoldenrodyellow;
+				text-align: center;
+			}
+			
+			#s2 {
+				width: 100%;
+				height: 1000px;
+				background: linear-gradient(to left, #091A14, #23755b);
+			}
+			
+			#s3 {
+				width: 100%;
+				height: 1000px;
+				border: solid black 1px;
+			}
+			
+			.r {
+				background: white;
+				line-height: 60px;
+			}
+			
+			h3:nth-of-type(1) {
+				left: 150px;
+				text-decoration: none;
+				position: relative;
+				font-family:"宋体",serif;
+			}
+			
+			h3:nth-of-type(2) {
+				left: 800px;
+				text-decoration: none;
+				position: relative;
+				font-family:"宋体",serif;
+			}
+			
+			h3 {
+				display: inline-block;
+			}
+			
+			.a1 {
+				color: black;
+				font-size: 15px;
+			}
+			
+			.a1:hover {
+				color: chocolate;
+			}
+			
+			.a2 {
+				color: black;
+				font-size: 15px;
+				left: 950px;
+			}
+			
+			.a2:hover {
+				color: chocolate;
+			}
+			
+			.a3 {
+				color: black;
+				font-size: 15px;
+				left: 954px;
+			}
+			
+			.a3:hover {
+				color: chocolate;
+			}
+			
+			.a4 {
+				color: black;
+				font-size: 15px;
+				left: 955px;
+			}
+			
+			.a4:hover {
+				color: chocolate;
+			}
+			
+			.a5 {
+				color: black;
+				font-size: 15px;
+				left: 956px;
+			}
+			
+			.a5:hover {
+				color: chocolate;
+			}
+			
+			#s3 {
+				color: white;
+				font-size: 20px;
+			}
+			
+			.GM {
+				width: 80px;
+				height: 30px;
+				position: relative;
+				left: 959px;
+				background-color: orange;
+				border: none;
+			}
+			
+			#s3 h1 {
+				color: white;
+				font-size: 40px;
+				position: relative;
+				right: 300px;
+				top: 370px;
+				line-height: 80px;
+				font-family: "黑体",serif;
+			}
+			
+			#s3 p {
+				color: white;
+				font-size: 20px;
+				position: relative;
+				right: -200px;
+				top: 450px;
+				line-height: 40px;
+				font-family: "黑体",serif;
+			}
+			
+			#s3 span {
+				position: relative;
+				right: -800px;
+				top: 10px;
+			}
+			
+			span img {
+				height: 800px;
+			}
+			
+			#s4 {
+				width: 100%;
+				height: 1000px;
+				border: solid black 1px;
+			}
+			
+			#s4 h2 {
+				color: white;
+				font-size: 40px;
+				position: relative;
+				right: -200px;
+				top: 370px;
+				line-height: 80px;
+			}
+			
+			#s4 p {
+				color: white;
+				font-size: 20px;
+				position: relative;
+				right: -760px;
+				top: 450px;
+				line-height: 40px;
+			}
+			
+			#s4 span {
+				position: relative;
+				right: -200px;
+				top: -140px;
+			}
+			
+			span img:nth-child(2) {
+				height: 100px;
+			}
+
+		#s6 {
+			width: 100%;
+			height: 1000px;
+			border: solid black 1px;
+			background-image: url(img/index_section_04.jpg);
+			background-position: -450px;
+			background-repeat: no-repeat;
+		}
+		#s6 p {
+			font-size: 16px;
+			color: #BF9F73;
+			text-align: center;
+		}
+		.s6-font3 {
+			font-size: 10px;
+			color: #FFA500;
+			text-align: center;
+			opacity: 0.3;
+		}
+		#s7 {
+			width: 100%;
+			height: 1000px;
+			border: solid black 1px;
+			background-size: 2000px, 2000px;
+			background: url(img/index_section_05.jpg) no-repeat -255px;
+		}
+		#s7 p {
+			font-size: 40px;
+			color: #BF9F73;
+			text-align: center;
+		}
+		.s7-font1 {
+			position: relative;
+			top: 20px;
+		     }
+		    #s8{
+			width: 100%;
+			height: 1000px;
+			border: solid black 1px;
+			   }
+			#s8 h2{
+				font-size:40px ;
+				color: blue;
+				line-height: 70px;
+				position: relative;
+				top: 400px;
+				left: 200px;
+			    }
+			#s8 p{
+				color: white;
+				font-size:20px ;
+				position: relative;
+				top: 500px;
+				left: 670px;
+			    }
+			#s8 img{
+				position: relative;
+				top: 600px;
+				left: 670px;
+			    }
+				#s8{
+				background-image: url(img/index_section_06.jpg);
+				background-repeat: no-repeat;
+				background-size: 500px 800px;
+				background-position: 80px;
+				}
+				#s9{
+			     width: 100%;
+		         height: 1000px;
+			     border: solid black 1px;
+					}
+				#s9 img{
+						height:1000px;
+
+						}
+				#s10{
+					width: 100%;
+			        height: 1000px;
+			        border: solid black 1px;
+					}
+				#s10 h3{
+						color: white;
+						position: relative;
+				        top: 100px;
+				        left: 350px;
+				       
+						}
+			    #s10 p{
+					    color: white;
+						position: relative;
+				        top: 100px;
+				        left: 310px;
+						}
+                #s11 h3{
+                	    color: white;
+						position: relative;
+				        bottom: 904px;
+				        left: 700px;
+                }
+                #s11 p{
+                	 color: white;
+						position: relative;
+				        bottom: 903px;
+				        left: 670px;
+                }
+                #s12 h3{
+                	  color: white;
+					  position: relative;
+				      bottom: 985px;
+				      left: 1000px;
+                }
+                #s12 p{
+                	  color: white;
+					  position: relative;
+				      bottom: 980px;
+				      left: 980px;
+                	}
+                	
+                	#s13 h3{
+                	  color: white;
+					  position: relative;
+				      bottom:900px;
+				      left: 325px;
+                	}
+                	#s13 p{
+                		color: white;
+					  position: relative;
+				      bottom: 900px;
+				      left: 310px;
+                	}
+                	#s14 h3{
+                		color: white;
+					  position: relative;
+				      bottom:985px;
+				      left: 692px;
+                	}
+                #s14 P{
+                		color: white;
+					  position: relative;
+				      bottom:980px;
+				      left:690px;
+                }
+                #s15 h3{
+                		color: white;
+					  position: relative;
+				      bottom:1068px;
+				      left:1000px;
+                }
+                #s15 p{
+                	color: white;
+					  position: relative;
+				      bottom:1055px;
+				      left:970px;
+                }
+                #s16 img{
+                	 position: relative;
+				      bottom:1000px;
+				      left:0px;
+                }
+                #s17 h2{
+
+			        color: white;
+                }
+                #s17{
+                	position: absolute;
+			        top: 9350px;
+			        font-size: 25px;
+			        left: 150px;
+                }
+                #s18 h2{
+
+			        color: white;
+                }
+                #s18{
+                	position: absolute;
+			        top: 9430px;
+			        font-size: 25px;
+			        left: 150px;
+                }	
+                #s19{
+                	position: absolute;
+			        top: 9580px;
+			        font-size: 15px;
+			        left: 150px;
+                }
+                #s19 h2{
+                	 color: white;
+                	}
+                	#s20{
+                    position: absolute;
+			        top: 9540px;
+			        font-size: 15px;
+			        left: 150px;
+                	}
+                	#s20 h2{
+                		color: white;
+                	}
+               #s21{
+                     position: absolute;
+			        top: 9750px;
+			        font-size: 25px;
+			        left: 150px;
+                	}
+                	#s21 h2{
+                		color: blue;
+                	}
+                	#s22{
+                			position: absolute;
+			        top: 9800px;
+			        font-size: 15px;
+			        left: 150px;
+                	}
+                	#s22 h2{
+                		color: white;
+                	}
+                		#s23{
+                	position: absolute;
+			        top: 9900px;
+			        font-size: 25px;
+			        left: 150px;
+                	}
+                #s23 h2{
+                		color: blue;
+                	}
+                #s24 h2{
+                		color: white;
+                	}
+                #s24{
+                	position: absolute;
+			        top: 9950px;
+			        font-size: 15px;
+			        left: 150px;
+                	}
+                #phone{
+				width: 350px;
+				height: 729px;
+				/*border: 1px solid red;*/
+				position: relative;
+				bottom:900px;
+				left: 300px;
+				/*background: url(img/index_section08_phone.png);*/
+				}
+				#phonevideo{
+				width: 350px;
+				height: 729px;
+				/*border: 1px solid blue;*/
+				position: relative;
+				background: url(img/index_section08_phone.png);
+				background-size: contain;
+				}
+				#phonevideo video{
+					position: absolute;
+					left: 16px;
+					top: 10px;
+					background-size: cover;
+				}	
+                #hbs1{
+                	margin: 30px;
+                	font-size: 60px;
+                	color: #CCA36A;
+                }
+		</style>
+	</head>
+
+	<body>
+
+   <div>
+			<a href="index.html">小米商城</a>
+			<a href="#">MlUl</a>
+			<a href="#">loT</a>
+			<a href="#">云服务</a>
+			<a href="#">金融</a>
+			<a href="#">有品</a>
+			<a href="#">小爱开放平台</a>
+			<a href="#">政企服务</a>
+			<a href="#">下载APP</a>
+			<a href="#">Select Region</a>
+			<a href="login.html" class="dengLu">登陆</a>
+			<a href="register.html" class="zhuche">注册</a>
+			<a href="#" class="xiaoxi">销售通知</a>
+		</div>
+
+		<div class="r">
+			<p>
+				<h3>小米MIX</h3>
+				<h3><a href="#" class="a1">概述</a></h3>
+				<h3><a href="#" class="a2">参数</a></h3>
+				<h3><a href="#" class="a3">图集</a></h3>
+				<h3><a href="#" class="a4">F码通道</a></h3>
+				<h3><a href="#" class="a5">用户评价</a></h3>
+				<a href="#" class="GM">立即购买</a>
+			</p>
+		</div>
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+
+<div class="s1">
+        <div class="t1">
+<ul>
+        <li>
+        	<a href="#"><img src="img/index_header_1.jpg"  alt=""></a>
+        	<p  style="position: absolute;top: 0;left: 200px;">
+        		<span >小米MIX3</span>
+        		<br />
+        		<span  style="color: white;font-size: 30px;position:relative;left: 30px;">一面科技&nbsp;&nbsp;&nbsp;一面艺术</span>
+        		<br />
+        		<span style="color: white; position: relative; left: 30px; top: 50px;">
+        		磁动力滑盖全面屏丨前后旗舰 AI 双摄
+        		<br />
+        		四曲面彩色陶瓷机身丨故宫特别版
+        		</span>
+        		<br />
+        		<br />
+        		<br />
+        		<br />
+        			<span style="color: #CCA36A; font-size: 30px;">
+        			&nbsp;&nbsp;&nbsp;&nbsp;
+        			&nbsp;&nbsp;&nbsp;&nbsp;3299
+        		</span>
+        		<span style="color: white; font-size: 20px;">
+        			元起
+        		</span>
+        	</p>
+        </li>
+        <li>
+        	<a href="#"><img src="img/index_header_2.jpg" alt=""></a>
+        	<p id="hbp1" style="position: absolute;top: 0;left: 1000px;">
+        		<span >小米MIX3</span>
+        		<br />
+        		<span style="color: white;font-size: 30px;position:relative;left: 30px;">一面科技&nbsp;&nbsp;&nbsp;一面艺术</span>
+        		<br />
+        		<span style="color: white; position: relative; left: 30px; top: 50px;">
+        		磁动力滑盖全面屏丨前后旗舰 AI 双摄
+        		<br />
+        		四曲面彩色陶瓷机身丨故宫特别版
+        		</span>
+        		<br />
+        		<br />
+        		<br />
+        		<br />
+        			<span style="color: #CCA36A; font-size: 30px;">
+        			&nbsp;&nbsp;&nbsp;&nbsp;
+        			&nbsp;&nbsp;&nbsp;&nbsp;3299
+        		</span>
+        		<span style="color: white; font-size: 20px;">
+        			元起
+        		</span>
+        </li>
+        <li>
+        	<a href="#"><img src="img/index_header_3.jpg" alt=""></a>
+        	<p  style="position: absolute;top: 0;left: 200px;">
+        		<span id="hbs1">小米MIX3</span>
+        		<br />
+        		<span id="hbs2" style="color: white;font-size: 30px;position:relative;left: 30px;">一面科技&nbsp;&nbsp;&nbsp;一面艺术</span>
+        		<br />
+        		<span style="color: white; position: relative; left: 30px; top: 50px;">
+        		磁动力滑盖全面屏丨前后旗舰 AI 双摄
+        		<br />
+        		四曲面彩色陶瓷机身丨故宫特别版
+        		</span>
+        		<br />
+        		<br />
+        		<br />
+        		<br />
+        			<span style="color: #CCA36A; font-size: 30px;">
+        			&nbsp;&nbsp;&nbsp;&nbsp;
+        			&nbsp;&nbsp;&nbsp;&nbsp;3299
+        		</span>
+        		<span style="color: white; font-size: 20px;">
+        			元起
+        		</span>
+        </li>
+</ul>
+        </div>
+        <div class="t2">
+        </div>
+        <div class="anniu left">
+        <
+        </div>
+        <div class="anniu right">
+        >
+        </div>
+    </div>
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<div id="s2">
+		<br />
+		<br />
+			<h1>开启陶瓷手机的色彩时代</h1>
+			<h1>手机中的艺术品</h1>
+			<h2>精致的四曲面陶瓷机身，经典的黑色陶瓷，优雅大气，天然翡翠色，如玉般典雅高贵，</h2>
+			<h2>与四曲面陶瓷浑然天成，掌心间尽是璀璨光彩。</h2>
+			<p>
+				<img src="img/index_section03_phone.png" height="90%" width="90%"  alt=""/>
+			</p>
+		</div>
+
+		<div id="s3">
+			<h1>开创性的磁动力滑盖全面屏 </h1>
+			<h1>全面屏开创者，再次推动探索</h1>
+			<p>小米MIX 3，93.4%的超高屏占比， 前置双摄隐藏</p>
+			<p>式设计， 手机正面只有屏幕。开创性的磁动力助推</p>
+			<p>设计，经 30 万次严苛推屏考验，依然完好如初。</p>
+			<span><img src="img/index_section01_phone12.png" alt=""/></span>
+		</div>
+
+		<div id="s4">
+			<h2>新一代全面屏交互方式</h2>
+			<h2>复杂操作，一推即达</h2>
+			<p>滑开秒回微信，滑开随时阅读,</p>
+			<p>滑开一秒支付，滑开更支持个人定义,</p>
+			<p>为滑盖赋予更多可能， </p>
+			<p>让你的随手一滑，直达最爱的 App。</p>
+			<span><img src="img/index_section02_video3.jpg" alt=""/></span>
+		</div>
+		<div id="s6">
+			<h1 class="s6-font1">小米MIX 3 故宫特别版</h1>
+			<h1 class="s6-font2">传承中华国宝艺术之美</h1>
+			<p>与故宫博物院合作研制陶瓷色，色彩灵感源自明宣德三大上品色釉霁蓝釉，霁蓝釉又称宝石蓝釉，</p>
+			<p>蓝如宝石般澄净珍贵，堪称陶瓷国宝色。 将祥瑞神兽“獬豸”铭刻于机身，精细如鎏丝，文雅隽永，于故宫发布。</p>
+			<p class="s6-font3">獬豸：古名獬廌（xiè zhì），故宫镇殿五脊六兽之一，传说中长有一角，能区分正直与邪恶，被视为可驱害压邪的祥瑞神兽。</p>
+		</div>
+
+		<div id="s7">
+			<p class="s7-font1">小米MIX 3 故宫特别版礼盒</p>
+		</div>
+		<div id="s8">
+			<h2>震撼全面屏下的，非凡拍照体验</h2>
+			<h2>DxOMark拍照108分，世界领先</h2>
+			<p>绚丽的夜景好美，可手机总是拍不出？1.4um 大像素 + 2PD 双核对焦技</p>
+			<p>术， 配合全新手持超级夜景，八项黑科技，让你稳稳留住绝美夜色。</p>
+			<img src="img/index_section06_icon1.png"/>
+		</div>
+		<div id="s9">
+			<img src="img/index_section_07.jpg" alt=""/>
+		</div>
+		<div id="s10">
+			
+                <h3> AI 场景相机</h3><br/>
+                <p> 人景分离，12 类场景美化</p>
+              
+		</div>
+		
+		<div id="s11">
+			<h3>影棚光效</h3>
+			<p>口袋里的影棚级打光</p>
+		</div>
+		<div id="s12">
+			<h3>AI 梦境虚化</h3>
+			<p>梦幻的动态虚化效果</p>
+		</div>
+		
+		<div id="s13">
+			<h3>AI 视频实时美颜</h3>
+			<p>智能追踪人脸，动态美颜</p>
+		</div>
+		<div id="s14">
+			<h3>AI 裸妆美颜</h3>
+			<p>轻补自然裸妆</p>
+		</div>
+		<div id="s15">
+			<h3>AI 天使眼神光</h3>
+			<p>7 款眼神光，眼眸精灵动人</p>
+		</div>
+		<div id="s16">
+			<img src="img/index_section_09.jpg"/>
+		</div>
+		 -->	
+		 <div id="">
+		 	
+		 </div>>
+			<div id="s17">
+			<h2>小米迄今最强前置双摄</h2>
+		</div>
+		<div id="s18">
+			<h2>AI 体验大满贯</h2>
+		</div>
+		<div id="s19">
+			<h2>精准分析画面内物体及远近层次，实时呈现</h2>
+		</div>
+		<div id="s20">
+			<h2>单反般的光学虚化效果， 轻松拍出宛如梦境的唯美影片。</h2>
+		</div>
+		<div id="s21">
+			<h2>24MP 主摄</h2>
+		</div>
+			<div id="s22">
+			<h2>24MP 索尼旗舰感光元件</h2>
+		</div>
+		</div>
+			<div id="s23">
+			<h2>2MP 副摄</h2>
+		</div>
+			<div id="s24">
+			<h2>独立景深相机</h2>
+		</div>
+		
+		<div id="phone">
+			<div id="phonebg">
+			</div>
+			<div id="phonevideo">
+				<video width="90%" height="100%" autoplay="autoplay" loop="loop" >
+					<source src="img/index_section08_video.mp4" type="video/mp4"></source>
+				</video>
+			</div>
+		</div>
+		
+		<script type="text/javascript">
+    $(function(){
+         //初始化，设置第一个出现的图片和触碰点
+        $(".t1 li").first().show();
+        $(".t2 li").first().addClass("active");
+//鼠标悬停事件，排斥其他按钮
+        $(".t2 li").mouseover(function(){
+         //悬停时
+        $(this).addClass("active").siblings("li").removeClass("active");
+        var index=$(this).index();//获取索引
+
+        i=index;
+
+        $(".t1 li").eq(index).fadeIn().siblings("li").fadeOut();//筛选淡入其余淡出
+        })
+//定时自动 setInterval(所执行方法函数，毫秒)
+//所设定时间为2000毫秒,即2秒一次
+var i=0;
+       var t = setInterval(move,2000);
+
+function move(){//一次定义函数多次使用
+           i++;
+           if(i==5){
+               i=0;//判断循环到四张图的时候回到第一图重新播放
+           }
+           $(".t2 li").eq(i).addClass("active").siblings("li").removeClass("active");
+           $(".t1 li").eq(i).fadeIn().siblings().fadeOut();//筛选淡入
+        }
+
+function moveleft(){//一次定义函数多次使用(向左的滑板)
+           i--;
+           if(i==-1){
+               i=4;//判断循环到四张图的时候回到第一图重新播放
+           }
+           $(".t2 li").eq(i).addClass("active").siblings("li").removeClass("active");
+           $(".t1 li").eq(i).fadeIn().siblings().fadeOut();//筛选淡入
+        }
+
+
+
+
+$(".s1").hover(function(){
+clearInterval(t);
+},function(){
+t = setInterval(move,2000);
+})
+
+//点击右边箭头进行移动执行动画
+$(".s1 .right").click(function(){
+    move();
+    })
+//点击左边箭头执行的动画
+$(".s1 .left").click(function(){
+    moveleft();
+})
+
+
+
+    })
+    </script>
+    
+    
+    
+
+    <style>
+    #zui{
+			width: 100%;
+			height: 300px;
+			display: block;
+			color: white;
+		}
+		#zui img{
+			width: 150px;
+			height: 150px;
+		}
+		
+		#zui div span a{
+			text-decoration: none;
+		}
+		.jiange{
+			position: relative;
+			left: 170px;
+			bottom: 150px;
+		}
+		#zui div a{
+			text-decoration: none;
+			color: white;
+			position: relative;
+			left: -1px;
+		}
+		#zui p a{
+			line-height: 50px;
+			text-decoration: none;
+			color: white;
+			opacity: 0.6;
+			position: relative;
+			left: -1px;
+		}
+		#zui p{
+			position: relative;
+			left: 170px;
+			bottom: 150px;
+			display: block;
+		}
+		#zui p a:hover{
+			color: orange;
+		}
+		#zui div a:hover{
+			color: orange;
+		}
+        #zui{
+            position: relative;
+            left: 350px;
+            bottom: 300px;
+        }
+        .aaahome:hover{
+         color: chocolate;
+        }
+</style>
+<div id="zui" style="position: relative;top: -750px; left: 250px;">
+        <img src="img/timg.jpg"/>
+        <div class="jiange"><a href="">&nbsp;小米商城&nbsp;</a>|<a href="">&nbsp;MIUI&nbsp;</a>|<a href="">&nbsp;米家&nbsp;</a>|<a href="">&nbsp;米聊&nbsp;</a>|<a href="">&nbsp;多看&nbsp;</a>|<a href="">&nbsp;游戏&nbsp;</a>|<a href="">&nbsp;路由器&nbsp;</a>|<a href="">&nbsp;米粉卡&nbsp;</a>|<a href="">&nbsp;政企服务&nbsp;</a>|<a href="">&nbsp;小米天猫店&nbsp;</a>|<a href="">&nbsp;隐私政策&nbsp;</a>|<a href="">&nbsp;问题反馈&nbsp;</a>|<a href="">&nbsp;廉政举报&nbsp;</a>|<a href="">&nbsp;Select Region&nbsp;</a></div>
+        <p>
+            <a href="">&copy;<span>mi.com</span>京ICP证110507号</a>&nbsp;
+            <a href="">京ICP备10046444号</a>&nbsp;<a href="">京公网安备11010802020134号</a>&nbsp;<a href="">京网文[2017]1530-131号</a>
+        </p>
+        <p>
+            <a href="">(京)网械平台备字(2018)第00005号</a>&nbsp;
+            <a href="">互联网药品信息服务资格证(京)-非经营性-204-0090</a>&nbsp;
+            <a href="">营业执照</a>&nbsp;
+            <a href="">医疗器械公告</a>
+        </p>
+    </div>
+<a href="./index.html" style="position: relative;bottom: 2950px;left: 1400px;text-decoration: none;color:white"><p  class="aaahome">返回小米商城>>></p></a>
+	</body>
+
+</html>

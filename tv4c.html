@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0px;
+				padding: 0px;
+			}
+
+			#box1{
+				width: 100%;
+				height: 100px;
+				background:white;
+				position: fixed;
+				top: 0;
+				left: 0;
+				z-index: 5;
+			}
+			div:nth-of-type(1){
+				display: inline;
+				position: fixed;
+				right: 0;
+				top: 0;
+			}
+			div:nth-of-type(1) h1{
+				font-size: 25px;
+				display: inline;
+				color: #000000;
+				font-weight: initial;
+				position: relative;
+				left: 70px;
+				bottom: -30px;
+			}
+			div:nth-of-type(1) h2{
+				font-size: 14px;
+				display: inline;
+				position: relative;
+				left: 70px;
+				bottom: -30px;
+			}
+			div:nth-of-type(1) h2 a{
+				color: #818181;
+				text-decoration: none;
+			}
+			div:nth-of-type(1) a:hover{
+				color: orange;
+			}
+			div:nth-of-type(1) p{
+				display: inline;
+				color: #616161;
+				position: relative;
+				left: 600px;
+				bottom: -30px;
+			}
+			div:nth-of-type(1) p a{
+				color: #000000;
+				text-decoration: none;
+			}
+			div:nth-of-type(1) span a{
+				border: 5px;
+				background-color: orange;
+				text-decoration: none;
+				border-radius: 1px;
+				box-shadow: 2px 2px 2px orange;
+				color: white;
+			}
+			div:nth-of-type(1) span a:hover{
+				color: white;
+				background-color: darkorange;
+			}
+			#frist{
+				height: 900px;
+				width: 100%;
+				background-image: url(img/top.jpg);
+				background-repeat:no-repeat;
+				position: relative;
+			}
+			.wen1{
+				height: 50px;
+				font-size: 40px;
+				font-weight: 100;
+				text-align: center;
+				color: white;
+				position: relative;
+				bottom: -150px;
+				z-index: 2;
+			}
+			.wen2{
+				height: 100px;
+				font-size: 50px;
+				font-weight: bolder;
+				text-align: center;
+				color: white;
+				position: relative;
+				bottom: -150px;
+				z-index: 2;
+			}
+			.wen3{
+				height: 50px;
+				font-size: 30px;
+				font-weight: bold;
+				text-align: center;
+				position: relative;
+				bottom: -150px;
+				color: white;
+				z-index: 2;
+			}
+			.dian1{
+				width: 100%;
+				height: 800px;
+				background-image: url(img/toptv.png);
+				background-size:1238px 622px ;
+				position: relative;
+				bottom: 450px;
+				left: 150px;
+				text-align: center;
+				z-index: 2;
+				font-size: 12px;
+				color: #FFFFFF;
+				background-repeat:no-repeat;
+			}
+		.dianwen{
+			font-size: 22px;
+			text-align: center;
+			margin-top: 0;
+			position: relative;
+			bottom: 700px;
+			color: #556572;
+		}
+			.hang{
+				display: inline;
+				
+				list-style: none;
+				position: relative;
+				bottom: 700px;
+			}
+			li:nth-of-type(1){
+				
+				position: relative;
+				left: -50px;
+				bottom: -40px;
+			}
+			li:nth-of-type(2){
+				position: relative;
+				left: 270px;
+				bottom: 140px;
+			}
+			li:nth-of-type(3){
+				position: relative;
+				left: 550px;
+				bottom: 320px;
+			}
+			li:nth-of-type(4){
+				position: relative;
+				left: 850px;
+				bottom: 500px;
+			}
+			li:nth-of-type(5){
+				position: relative;
+				left: 1190px;
+				bottom: 670px;
+			}
+			.ren{
+				width: 100%;
+				height: 1500px;
+				background-image:url(img/p2.jpg) ;
+				background-size: 1900px 1000px;
+				background-repeat: no-repeat;
+				position: relative;
+				bottom: 1350px;
+			}
+			.ren h1{
+				font-size: 50px;
+				color: white;
+				text-align: center;
+				font-weight: bolder;
+				position: relative;
+				bottom: 0px;
+				z-index: 2;
+			}
+			.ren p{
+				font-size: 30px;
+				color: white;
+				text-align: center;
+				font-weight: bold;
+				position: relative;
+				bottom: -100px;
+			}
+			.ren h2{
+				width: 300px;
+				height: 600px;
+				color: white;
+				position: relative;
+				left: 150px;
+				bottom: -250px;
+				line-height: 50px;
+			}
+			.shang{
+			width: 100%;
+			height: 950px;
+			position: relative;
+			bottom: 1845px;
+			background-color: #C0C0C0;
+			display: inline-block;
+			
+		}
+		.shang h3{
+			font-size: 60px;
+			font-weight: bolder;
+			text-align: center;
+			color: #747474;
+			position: relative;
+			bottom: -150px;
+			z-index: 1;
+		}
+		.shang h4{
+			font-size: 30px;
+			font-weight: bold;
+			text-align: center;
+			color: #999999;
+			position: relative;
+			bottom: -150px;
+			z-index: 1;
+		}
+		#shi{
+			width: 800px;
+			height: 500px;
+			background-image: url(img/p30-r.png);
+			background-size: 800px 500px;
+			position: relative;
+			left: 350px;
+			bottom: 2450px;
+			border-radius: 10px;
+			background-repeat:no-repeat ;
+			z-index: 1;
+		}
+		#ping{
+			position: relative;
+			left: 223px;
+			bottom: 68px;
+			z-index: 2;
+		}
+		.juzhong{
+			width: 100%;
+			height: 1000px;
+				position: relative;
+				bottom: 2330px;
+				background-image:url(img/p4-bg.jpg) ;
+				background-size: 1500px 1000px;
+				background-repeat: no-repeat;
+			}
+			
+			.ying{
+				width: 941px;
+				height: 460px;
+				background-image: url(img/content-img-1.jpg);
+				background-size: 650px 464px;
+				background-repeat:no-repeat;
+				position: relative;
+				left: 424px;
+				bottom: -238px;
+				z-index: 2;
+			}
+			.juzhong h1{
+			font-size: 40px;
+			font-weight: bolder;
+			text-align: center;
+			color: white;
+			position: relative;
+			bottom: -0px;
+		}
+		.juzhong p{
+			font-size: 20px;
+			font-weight: bold;
+			text-align: center;
+			color: white;
+			position: relative;
+			bottom: -100px;
+		}
+		#fan{
+			width: 100%;
+			height: 1000px;
+			background-image: url(img/p9-bg.jpg);
+			background-size: 100% 1000px;
+			background-repeat: no-repeat;
+			position: relative;
+			bottom: 2320px;
+		}
+		#fan h1{
+			font-size: 60px;
+			font-weight: bolder;
+			text-align: center;
+			color: white;
+			position: relative;
+			bottom: -80px;
+			z-index: 1;
+		}
+		#fan p{
+			font-size: 40px;
+			font-weight: bold;
+			text-align: center;
+			color: white;
+			position: relative;
+			bottom: -100px;
+		}
+		#vip{
+			width: 100%;
+			height: 1000px;
+			background-image: url(img/index_vip_bg.jpg);
+			background-size: 100% 1000px;
+			background-repeat: no-repeat;
+			position: relative;
+			bottom: 2310px;
+			display:inline-block;
+		}
+		.vip1{
+			width: 500px;
+			height: 1000px;
+			position: relative;
+			left: 150px;
+			bottom: -300px;
+		}
+		.vip1 p{
+			text-align: center;
+			color: white;
+			font-size: 25px;
+			line-height: 50px;
+			text-indent: 10px;
+		}
+		.vip1 h1{
+			color: white;
+		}
+		.vip2{
+			width: 500px;
+			height: 1000px;
+			position: relative;
+			left: 850px;
+			bottom: 700px;
+		}
+		.vip2 p{
+			text-align: center;
+			color: white;
+			font-size: 25px;
+			line-height: 50px;
+			text-indent: 10px;
+		}
+		.vip2 h1{
+			color: white;
+		}
+		#anzhang{
+			width: 100%;
+			height: 1000px;
+			background-image: url(img/p11-bg.jpg);
+			background-size:100% 1000px;
+			background-repeat: no-repeat;
+			position: relative;
+			bottom: 2670px;
+		}		
+			#anzhang h1{
+			font-size: 60px;
+			font-weight: bolder;
+			text-align: center;
+			color: white;
+			position: relative;
+			bottom: -70px;
+		}
+		#anzhang p{
+			font-size: 40px;
+			font-weight: initial;
+			text-align: center;
+			color: white;
+			position: relative;
+			bottom: -90px;
+		}
+		.shuo{
+			border: 1px solid white;
+			width: 800px;
+			font-size: 18px;
+			text-align: center;
+			transition: 2s;
+			position: relative;
+			bottom: 2620px;
+			left: 350px;
+			color: black;
+			opacity: 0.5;
+		}
+		#lianxi{
+			width: 100%;
+			height: 1000px;
+			position: relative;
+			bottom: 2400px;
+			display: inline-block;
+		}
+		#tu{
+			width: 100%;
+			position: relative;
+			left: 380px;
+		}
+		#lianxi1{
+			width: 100%;
+			height: 100px;
+			display: block;
+			text-align: center;
+			position: relative;
+			left: 150px;
+			bottom: 200px;
+		}
+		#lianxi1 h1{
+			color: #000000;
+		}
+		#lianxi1 p{
+			font-size: 25px;
+			font-weight: bold;
+		}
+		#lianxi1 span{
+			color: red;
+		}
+		#lianxi2{
+			width: 100%;
+			height: 100px;
+			display: block;
+			color: #424242;
+			opacity: 0.8;
+			text-align: center;
+		}
+		#lianxi2 span:hover{
+			color: orange;
+		}
+		#lianxi2 a:hover{
+			color: orange;
+		}
+		#lianxi2 a{
+			text-align: center;
+			color: #818181;
+			text-decoration: none;
+		}
+		#zui{
+			width: 100%;
+			height: 300px;
+			display: block;
+			position: relative;
+			bottom: 2800px;
+			left: 200px;
+		}
+		#zui img{
+			width: 150px;
+			height: 150px;
+		}
+		
+		#zui div span a{
+			text-decoration: none;
+		}
+		.jiange{
+			position: relative;
+			left: 170px;
+			bottom: 150px;
+		}
+		#zui div a{
+			text-decoration: none;
+			color: #000000;
+		}
+		#zui p a{
+			line-height: 50px;
+			text-decoration: none;
+			color: #000000;
+			opacity: 0.6;
+		}
+		#zui p{
+			position: relative;
+			left: 170px;
+			bottom: 150px;
+			display: block;
+		}
+		#zui p a:hover{
+			color: orange;
+		}
+		#zui div a:hover{
+			color: orange;
+		}
+		</style>
+	</head>
+	<body>
+		<div id="box1">
+			<h1>小米电视4C 40英寸|</h1><h2><a href="">小米电视4C 40英寸</a></h2>
+			<p><a href="">概述</a>&nbsp;&nbsp;<a href="">参数</a>&nbsp;&nbsp;<a href="">安装服务</a>&nbsp;&nbsp;<a href="">常见问题</a>&nbsp;&nbsp;<a href="">F码通道</a>&nbsp;&nbsp;<a href="index.html">返回主页</a>&nbsp;&nbsp;
+				<span><a href="">立即购买</a></span></p>
+		</div>
+		<div id="frist">
+				<h2 class="wen1">人工智能电视</h2>
+				<h2 class="wen2">小米电视4C 40英寸</h2>
+				<h2 class="wen3"> 1299元(含运费) </h2>
+			</div>
+			<div class="dian1">
+			</div>
+			<div>
+				<p class="dianwen">
+					*该电视含开机等形式的广告，开机时的广告视频不能删除，更改，且第三方内容的广告视频无法控制
+				</p>
+				<ul class="hang">
+					<li><img src="img/top-1.jpg"/></li>
+					<li><img src="img/top-2.jpg"/></li>
+					<li><img src="img/top-3.jpg"/></li>
+					<li><img src="img/top-4.jpg"/></li>
+					<li><img src="img/top-5.jpg"/></li>
+				</ul>
+			</div>
+			<div class="ren">
+			<h1>人工智能系统</h1>
+			<p>通过历史记录，了解你的喜好，精准内容推荐</p>
+			<h2>能调节电视各项设置以及APP.α9人工智能画质引擎,色彩真实如亲眼所见,全新观看体验,看电视从未如此简单.</h2>
+		</div>
+		<div class="shang">
+			<h3>投屏好用APP+语音功能</h3>
+			<h4>可以手机下载[APP]，体验语音功能</h4>
+			</div>
+			<div id="shi">
+				<div id="ping">
+					<video width="400" height="400"
+						autoplay="autoplay" loop="loop">
+					<source src="img/video.mp4" type="video/mp4">
+					<source src="img/video.mp4" type="video/ogg">
+					<source src="img/video.mp4" type="video/webm">
+					<object width="" height="400" type="application/x-shockwave-flash" data="myvideo.swf">
+						<param name="movie" value="myvideo.swf" />
+						<param name="flashvars" value="autostart=true&amp;file=myvideo.swf" />
+					</object>
+					当前浏览器不支持 video直接播放，点击这里下载视频： <a href="myvideo.webm">下载视频</a>
+				</video>
+				</div>
+			</div>
+			<div class="juzhong">
+				<h1>海量影视</h1>
+			<p>内容丰富多样，有你想看的，更有各个年龄段的人想看的</p>
+		<div>
+		</div>
+		<div class="ying"> </div>
+		</div>
+		<div id="fan">
+			<h1>钢琴烤漆</h1>
+			<p>源自钢琴制造的烤漆工艺，让电视时尚雅致，<br />
+			更有艺术感
+			</p>
+		</div>
+		<div id="vip">
+			<div></div>
+			<div class="vip1">
+				<img src="img/vip_icon.png"/>
+				<h1>小米影视会员</h1>
+				<p>成为会员可享受"小米影视会员年卡（价值498元）+爱奇艺VIP会员年卡（价值198元）"
+				双卡的全部权益，价值696元，虽电视加价购可享受小米补贴价，超值特惠首年仅需299元。</p>
+			</div>
+			<div class="vip2">
+				<img src="img/vip_right.png"/>
+				<h1>小米儿童会员</h1>
+				<p>为0~8岁儿童精心挑选34万分钟全球30个国家和地区优质动画，寓教于乐
+				，抓住儿童成长敏感期，分龄推荐适合动画，激发儿童智力潜能，培养良好的语言能力，动手能力，
+				记忆力，逻辑思维和社会能力。</p>
+			</div>
+		</div>
+		<div id="anzhang">
+			<h1>安装服务</h1>
+			<p>贴心的安装服务，挂装、座装任你选择</p>
+		</div>
+		<div class="shuo">数据说明：*该电视含开机等形式的广告，
+			开机时的广告视频不能删除、更改，且第三方内容的广告视频无法控制；
+			1GB+4GB内存：实际可用容量会由于诸多因素而减少并有所差异，
+			由于操作系统运行占据了部分内存（RAM），实际可用空间小于标识内存容量，
+			由于安装操作系统和预装的程序占据了部分闪存（ROM），实际可用存储空间小
+			于标识闪存容量。不含底座高度测量范围为前框天侧最大外形到地侧小下巴按键处。
+			产品实际数据与标注尺寸可能会有些许误差。</div>
+			<div id="lianxi">
+				<div id="tu">
+					<img src="img/b30def5a8f0e967d128dec2b49751aa6.png"/>
+				</div>
+				<div id="lianxi1">
+					
+					<h1>扫码关注【<span>小米商城</span>】公众号</h1>
+					<p>回复"真心想要"，赢111元智能配件券</p>
+				</div>
+				<div id="lianxi2">
+					<a href=""><span><img src="img/截图 2018-11-03 12.08.41.png"/></span>&nbsp;&nbsp;预约维修服务&nbsp;&nbsp;</a>|
+					<a href=""><img src="img/7.png"/>七天无理由退货</a>|
+					<a href=""><img src="img/15.png"/>十五天免费换货</a>|
+					<a href=""><img src="img/礼品.png"/>满150元包邮</a>|
+					<a href=""><img src="img/标点.png"/>520余家售后网点</a>
+				</div>
+				<hr />
+			</div>
+			<div id="zui">
+				<img src="img/截图 2018-11-03 12.15.14.png"/>
+				<div class="jiange"><a href="">&nbsp;小米商城&nbsp;</a>|<a href="">&nbsp;MIUI&nbsp;</a>|<a href="">&nbsp;米家&nbsp;</a>|<a href="">&nbsp;米聊&nbsp;</a>|<a href="">&nbsp;多看&nbsp;</a>|<a href="">&nbsp;游戏&nbsp;</a>|<a href="">&nbsp;路由器&nbsp;</a>|<a href="">&nbsp;米粉卡&nbsp;</a>|<a href="">&nbsp;政企服务&nbsp;</a>|<a href="">&nbsp;小米天猫店&nbsp;</a>|<a href="">&nbsp;隐私政策&nbsp;</a>|<a href="">&nbsp;问题反馈&nbsp;</a>|<a href="">&nbsp;廉政举报&nbsp;</a>|<a href="">&nbsp;Select Region&nbsp;</a></div>
+				<p>
+					<a href="">&copy;<span>mi.com</span>京ICP证110507号</a>&nbsp
+					<a href="">京ICP备10046444号</a>&nbsp;<a href="">京公网安备11010802020134号</a>&nbsp;<a href="">京网文[2017]1530-131号</a>
+				</p>
+				<p>
+					<a href="">(京)网械平台备字(2018)第00005号</a>&nbsp;
+					<a href="">互联网药品信息服务资格证(京)-非经营性-204-0090</a>&nbsp;
+					<a href="">营业执照</a>&nbsp;
+					<a href="">医疗器械公告</a>
+				</p>
+				<p>
+					本网站所列数据，纯属模仿
+				</p>
+			</div>
+		</div>
+	</body>
+</html>

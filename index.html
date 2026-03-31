@@ -1,0 +1,585 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="style" xmlns="">
+<head>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>小米商城官网</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="./css/style.css" />
+    <script src="./js/jquery-3.1.1.min.js"></script>
+
+    <style type="text/css">
+
+        *{
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+        .t1 img{
+            width: 1226px;
+            height: 460px;
+        }
+        .s1{
+            width: 1226px;
+            height: 460px;
+            margin: 50px auto;
+            position: relative;
+            bottom: 50px;
+        }
+        .s2{
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 234px;
+            height: 460px;
+            background: #000000;
+            z-index:10;
+            opacity: 0.8;
+        }
+        .s2 li{
+            width: 234px;
+            height: 46px;
+            text-align: center;
+        }
+        .s2 li:hover{
+            background-color: chocolate;
+        }
+        .s2-ul span{
+            display: inline-block;
+            position: relative;
+            top: 10px;
+            font-size: 16px;
+        }
+        .s2-ul a{
+            text-decoration: none;
+            color: white;
+        }
+        .s5 img{
+            margin-left: 80px;
+        }
+
+        .t1 li{
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: none;
+        }
+        .t2 li{
+            width: 20px;
+            height: 20px;
+            background: white;
+            font-size: 14px;
+            border-radius: 50%;
+            text-align: center;
+            display: inline-block;
+            cursor: pointer;
+        }
+        .t2 li.active{
+            background-color: chocolate;
+        }
+        .t2{
+            position: absolute;
+            bottom: 10px;
+            left:50%;
+        }
+        .s1 .anniu{
+            width: 30px;
+            height: 60px;
+            background: rgba(0, 0, 0, 0.3);
+            color: white;
+            font-size: 14px;
+            text-align: center;
+            line-height: 60px;
+            position: absolute;
+            top: 50%;
+            margin-top: -30px;
+            cursor: pointer;
+        }
+        .s1 .left{
+            left: 234px;
+        }
+        .s1 .right{
+            right: 0;
+        }
+
+        .top-right div{
+            padding: 20px;
+        }
+        .top{
+            background: black;
+            line-height: 40px;
+        }
+        .top a{
+            color: white;
+            text-decoration: none;
+            font-size: 13px;
+            opacity: 0.5;
+            padding:6px;
+        }
+        .top a:hover{
+            opacity: 1;
+        }
+        .s3{
+            position: relative;
+            bottom: 80px;
+            left: 140px;
+        }
+        .s3-img-1{
+            position: relative;
+            right: 155px;
+        }
+        .s3-img-2{
+            position: relative;
+            right: 155px;
+        }
+        .s3-img-3{
+            position: relative;
+            right: 135px;
+        }
+        .s3-img-4{
+            position: relative;
+            right: 115px;
+        }
+        .s4-1{
+            width: 234px;
+            height: 340px;
+            background: white;
+            border-top: 2px solid red;
+        }
+        .s4-headfont{
+            font-size: 22px;
+        }
+        .s4{
+            position: relative;
+            left: 60px;
+        }
+
+        .s6{
+            position: relative;
+            bottom:260px;
+            left: 150px;
+        }
+        .s6 div{
+            display: inline-block;
+            position: relative ;
+            bottom: 370px;
+            margin-left: 10px;
+            cursor: pointer;
+        }
+        .s6 div:hover{
+            box-shadow: #000000 1px 1px 5px;
+        }
+        .s6-2-1,.s6-2-2,.s6-2-3,.s6-2-4{
+            position: relative;
+            left: 240px;
+            top:-300px;
+        }
+
+        .list-1{
+            position: relative;
+            left: 200px;
+        }
+        .denglu-font{
+            position: relative;
+            left: 160px;
+        }
+        #img1{
+            position: absolute;
+            left: 230px;
+        }
+        .denglu-font2{
+            position: relative;
+            display: inline;
+            left: 450px;
+        }
+        .s4-123{
+            position: relative;
+            left: 100px;
+        }
+
+        #foot{
+            width: 100%;
+            height: 70px;
+            display: block;
+            position: relative;
+            left: 150px;
+            bottom: 400px;
+        }
+        #foot img{
+            width: 100px;
+            height: 100px;
+        }
+
+        #foot div span a{
+            text-decoration: none;
+        }
+        .jiange{
+            position: relative;
+            left: 170px;
+            bottom: 150px;
+        }
+        #foot div a{
+            text-decoration: none;
+            color: #000000;
+        }
+        #foot p a{
+            line-height: 50px;
+            text-decoration: none;
+            color: #000000;
+            opacity: 0.6;
+        }
+        #foot p{
+            position: relative;
+            left: 170px;
+            bottom: 150px;
+            display: block;
+        }
+        #foot p a:hover{
+            color: orange;
+        }
+        #foot div a:hover{
+            color: orange;
+        }
+
+    </style>
+</head>
+<body>
+<!--轮播代码设置start -->
+<script type="text/javascript">
+    $(function(){
+        //初始化，设置第一个出现的图片和触碰点
+        $(".t1 li").first().show();
+        $(".t2 li").first().addClass("active");
+//鼠标悬停事件，排斥其他按钮
+        $(".t2 li").mouseover(function(){
+            //悬停时
+            clearInterval(t);
+            $(this).addClass("active").siblings("li").removeClass("active");
+            var index=$(this).index();//获取索引
+
+            i=index;
+
+            $(".t1 li").eq(index).fadeIn().siblings("li").fadeOut();//筛选淡入其余淡出
+        })
+//定时自动 setInterval(所执行方法函数，毫秒)
+//所设定时间为3000毫秒,即3秒一次
+        var i=0;
+        var t = setInterval(move,3000);
+
+        function move(){//一次定义函数多次使用
+            i++;
+            if(i==4){
+                i=0;//判断循环到四张图的时候回到第一图重新播放
+            }
+            $(".t2 li").eq(i).addClass("active").siblings("li").removeClass("active");
+            $(".t1 li").eq(i).fadeIn().siblings().fadeOut();//筛选淡入
+        }
+
+        function moveleft(){//一次定义函数多次使用(向左的滑板)
+            i--;
+            if(i==-1){
+                i=3;//判断循环到四张图的时候回到第一图重新播放
+            }
+            $(".t2 li").eq(i).addClass("active").siblings("li").removeClass("active");
+            $(".t1 li").eq(i).fadeIn().siblings().fadeOut();//筛选淡入
+        }
+
+
+
+
+        $(".s1").hover(function(){
+            clearInterval(t);//鼠标移入停止
+        },function(){
+            t = setInterval(move,2000);//鼠标移出继续动
+        })
+
+        $(".s1 .right").click(function(){
+            move();
+        })
+//点击左边箭头执行的动画
+        $(".s1 .left").click(function(){
+            moveleft();
+        })
+    })
+ //轮播代码设置end
+
+
+
+    //下拉菜单开始
+    $(document).ready(function(){
+        $("#img1").hide();
+    })
+    $(document).ready(function(){
+        $(".click1").click(function(){
+            $("#img1").slideToggle();
+        })
+    });
+</script>
+<div class="top">
+    <div class="denglu-font">
+        <a href="#" id="dingbuhome">小米商城</a>
+        <a href="#">MIUI</a>
+        <a href="#">loT</a>
+        <a href="#">云服务</a>
+        <a href="#">金融</a>
+        <a href="#">有品</a>
+        <a href="#">小爱开放平台</a>
+        <a href="#">企业团购</a>
+        <a href="#">资质证明</a>
+        <a href="#">协议规则</a>
+        <a href="#">下载APP</a>
+        <a href="#">Select location</a>
+        <div class="denglu-font2">
+            <a href="login.html" class="dengLu">登录</a>
+            <a href="register.html" class="zhuche">注册</a>
+            <a href="#" class="xiaoxi">消息通知</a>
+        </div>
+    </div>
+
+
+</div>
+<div class="list-1">
+    <ul class="list-ul-2" style="position: relative;right: 190px;">
+        <li><img src="img/timg.jpg" width="55px" height="55px" class="img-logo"/></li>
+        <li><a href="#">全部商品分类</a></li>
+        <li><a href="#" class="click1">小米手机</a></li>
+        <li><a href="#">Redmi 红米</a></li>
+        <li><a href="tv4c.html">电视</a></li>
+        <li><a href="bijibenmenu.html">笔记本</a></li>
+        <li><a href="#">路由器</a></li>
+        <li><a href="#">智能硬件</a></li>
+        <li><a href="#">服务</a></li>
+        <li><a href="#">社区</a></li>
+    </ul>
+</div>
+
+<!--下拉菜单开始-->
+<div id="img1" style="z-index: 999; display: inline;position: absolute;left: 100px;">
+    <ul>
+        <li>
+            <div id="img1-1">
+                <a href="mix3.html" style="text-decoration: none;">
+                    <img src="img/mix3-320.png" width="130px" height="100px"/>
+                    <p style="font-size: 12px; color: #000000;">小米MIX3</p>
+                    <p style="font-size: 11px; color: #FFA500;">3299元起</p>
+                </a>
+            </div>
+        </li>
+        <li>
+            <div id="img1-2" >
+
+                <a href="#" style="text-decoration: none;">
+                    <img src="img/pc-320-220-mi8.png" width="130px" height="100px"/>
+
+                    <p style="font-size: 12px;">小米8 青春版</p>
+                    <p style="font-size: 11px; color: #FFA500;">1399元起</p>
+                </a>
+            </div>
+        </li>
+        <li>
+            <div id="img1-3">
+                <a href="mi8.html" style="text-decoration: none;">
+                    <img src="img/pingmu-320.png" width="130px" height="100px"/>
+                    <p style="font-size: 12px;">小米8 屏幕指纹版</p>
+                    <p style="font-size: 11px; color: #FFA500;">3199元起</p>
+                </a>
+            </div>
+        </li>
+        <li>
+            <div id="img1-4" style="text-decoration: none;">
+                <a href="#"  style="text-decoration: none;">
+                    <img src="img/qingchun-320.png" width="130px" height="100px"/>
+                    <p style="font-size: 12px;">小米8</p>
+                    <p style="font-size: 11px; color: #FFA500;">2699元起</p>
+                </a>
+            </div>
+        </li>
+    </ul>
+</div>
+
+
+
+<div class="s1">
+    <!--轮播区左边的导航区-->
+    <div class="s2">
+        <ul class="s2-ul">
+            <a href="mix3.html"><li><span>手机 电话卡</span></li></a>
+            <a href="tv4c.html"><li><span>电视 盒子</span></li></a>
+            <a href="bijibenmenu.html"><li><span>笔记本 平板</span></li></a>
+            <a href="#"><li><span>家电 插电板</span></li></a>
+            <a href="#"><li><span>出行 穿戴</span></li></a>
+            <a href="#"><li><span>智能 路由器</span></li></a>
+            <a href="#"><li><span>电源 配件</span></li></a>
+            <a href="#"><li><span>健康 儿童</span></li></a>
+            <a href="#"><li><span>耳机 音响</span></li></a>
+            <a href="#"><li><span>生活 箱包</span></li></a>
+        </ul>
+    </div>
+    <!--轮播区左边的导航区end-->
+
+
+    <!--轮播页面-->
+    <div class="t1">
+        <ul>
+            <li><a href="./mix3.html"><img src="./img/1.jpg"  alt=""></a></li>
+            <li><a href="#"><img src="./img/2.jpg" alt=""></a></li>
+            <li><a href="#"><img src="./img/4.jpg" alt=""></a></li>
+            <li><a href="#"><img src="./img/3s.jpg" alt=""> </a> </li>
+        </ul>
+        <style>
+            .t1-1{
+                background-color: white;
+            }
+        </style>
+        <div class="t1-1">
+        </div>
+
+    </div>
+    <div class="t2">
+        <ul>
+            <li>&nbsp;</li>
+            <li>&nbsp;</li>
+            <li>&nbsp;</li>
+            <li>&nbsp;</li>
+        </ul>
+    </div>
+    <div class="anniu left">
+        <
+    </div>
+    <div class="anniu right">
+        >
+    </div>
+    <!--轮播页面end-->
+
+</div>
+<!--轮播图下面一列-->
+<div class="s3" align="center">
+    <a href="#"><img src="img/left-img.png" alt="" width="234px" height="170x" class="s3-img-1"></a>
+    <a href="mi8.html"><img src="img/xmad_1.jpg" alt="" width="316px" height="170x" class="s3-img-2"></a>
+    <a href="#"><img src="img/xmad_2.jpg" alt="" width="316px" height="170x" class="s3-img-3"></a>
+    <a href="AirPurifierPro.html"><img src="img/xmad_3.jpg" alt="" width="316px" height="170x" class="s3-img-4"></a>
+</div>
+<!--轮播图下面一列end-->
+
+
+
+<!--小米闪购-->
+<div class="s4-123">
+    <div class="s4">
+        <p class="s4-headfont" style="display: inline-block;">小米闪购</p>
+        <div class="s4-1" >
+            <br>
+            <br>
+            <p style="color: red;font-size: 18px">10:00&nbsp;场</p>
+            <br>
+            <img src="./img/flashpurchase.png" alt="">
+            <br>
+            <p style="color: black;opacity: 0.6;">距离结束还有</p>
+            <br>
+            <p style="display: inline-block;color: black;width: 40px;height: 40px;">00</p>
+            <p style="display: inline-block">:</p>
+            <p style="display: inline-block;color: black;width: 40px;height: 40px;">00</p>
+            <p style="display: inline-block">:</p>
+            <p style="display: inline-block;color: black;width: 40px;height: 40px;">00</p>
+        </div>
+
+    </div>
+
+
+    <div class="s5" style="position: relative; bottom: 345px ;left:300px">
+        <a href="#"><img src="./img/shangou1.png" alt=""></a>
+        <a href="#"><img src="./img/shangou2.png" alt=""></a>
+        <a href="#"><img src="./img/shangou3.png" alt=""></a>
+        <div style="text-align: center">
+            <br>
+            <img src="./img/heisha.jpg" alt="" width="1226px" height="120px" style="position: relative; right: 450px ;top:50px;cursor: pointer;">
+        </div>
+    </div>
+</div>
+<!--小米闪购end-->
+
+
+
+<!--手机区-->
+<div class="s6">
+    <h2>手机</h2>
+    <a href="mix3.html"><img src="./img/shoujileft.jpg" alt="" width="234px" height="628px" style=""></a>
+
+    <div class="s6-1">
+        <img src="./img/shouji1.jpg" alt="">
+        <p style="position: relative;left: 30px;font-size: 14px">小米8 青春版 4GB+64GB</p>
+        <p style="font-size:11px;color:black;opacity: 0.5;position: relative;left:20px;">潮流镜面渐变色，2400万自拍旗舰</p>
+        <p style="font-size: 14px;position:relative;left: 80px;color: #FFA500">1399元</p>
+    </div>
+    <div class="s6-2">
+        <img src="./img/shouji2.png" alt="">
+        <p style="position: relative;left: 10px;font-size: 14px">小米8 屏幕指纹版 8GB+128GB</p>
+        <p style="font-size:11px;color:black;opacity: 0.5;position: relative;left:20px;">压感屏幕指纹，双频GPS超精..</p>
+        <p style="font-size: 14px;position:relative;left: 80px;color: #FFA500">3599元</p>
+    </div>
+    <div class="s6-3">
+        <img src="./img/shouji3.jpg" alt="">
+        <p style="position: relative;left: 30px;font-size: 14px">小米8 SE 4GB+64GB</p>
+        <p style="font-size:11px;color:black;opacity: 0.5;position: relative;left:20px;">AI超感光双摄，三星AMOLED屏幕</p>
+        <p style="font-size: 14px;position:relative;left: 80px;color: #FFA500">1699元</p>
+    </div>
+    <div class="s6-4">
+        <img src="./img/shouji4.jpg" alt="">
+        <p style="position: relative;left: 30px;font-size: 14px;">小米MIX 2S 8+256GB</p>
+        <p style="font-size:11px;color:black;opacity: 0.5;position: relative;left:20px;">骁龙845年度旗舰处理器，艺术品般陶..</p>
+        <p style="font-size: 14px;position:relative;left: 80px;color: #FFA500">3599元</p>
+    </div>
+    <br>
+    <div class="s6-2-1">
+        <img src="./img/shouji5.jpg" alt="">
+        <p style="position: relative;left: 50px;font-size: 14px;">小米6X 4GB+64GB</p>
+        <p style="font-size:11px;color:black;opacity: 0.5;position: relative;left:40px;">全索尼相机，骁龙660 AIE处理器</p>
+        <p style="font-size: 14px;position:relative;left: 80px;color: #FFA500">1199元</p>
+    </div>
+    <div class="s6-2-2">
+        <img src="./img/shouji6.jpg" alt="">
+        <p style="position: relative;left: 30px;font-size: 14px;">小米Max 2 4GB+64GB</p>
+        <p style="font-size:11px;color:black;opacity: 0.5;position: relative;left:20px;">6.44''大屏，5300mAh 充电宝级的大电量</p>
+        <p style="font-size: 14px;position:relative;left: 80px;color: #FFA500">1699元</p>
+    </div>
+    <div class="s6-2-3">
+        <img src="./img/shouji7.jpg" alt="">
+        <p style="position: relative;left: 30px;font-size: 14px;">小米MIX 2 全陶瓷尊享版</p>
+        <p style="font-size:11px;color:black;opacity: 0.5;position: relative;left:45px;">全面屏2.0，Unibody 全陶瓷</p>
+        <p style="font-size: 14px;position:relative;left: 80px;color: #FFA500">2699元</p>
+    </div>
+    <div class="s6-2-4">
+        <img src="./img/shouji8.jpg" alt="">
+        <p style="position: relative;left: 50px;font-size: 14px;">红米S2 3GB+32GB</p>
+        <p style="font-size:11px;color:black;opacity: 0.5;position: relative;left:40px;">前置1600万超大像素智能美拍</p>
+        <p style="font-size: 14px;position:relative;left: 80px;color: #FFA500">999元</p>
+    </div>
+</div>
+<br>
+<div style="text-align: center">
+    <img src="./img/dianshi.jpg" alt="" width="1226px" height="120px" style="position: relative; bottom: 500px" >
+</div>
+
+<!--手机区end-->
+
+
+
+
+<!--版权信息-->
+<div id="foot">
+    <img src="img/timg.jpg"/>
+    <div class="jiange"><a href="#dingbuhome">&nbsp;小米商城&nbsp;</a>|<a href="">&nbsp;MIUI&nbsp;</a>|<a href="">&nbsp;米家&nbsp;</a>|<a href="">&nbsp;米聊&nbsp;</a>|<a href="">&nbsp;多看&nbsp;</a>|<a href="">&nbsp;游戏&nbsp;</a>|<a href="">&nbsp;路由器&nbsp;</a>|<a href="">&nbsp;米粉卡&nbsp;</a>|<a href="">&nbsp;政企服务&nbsp;</a>|<a href="">&nbsp;小米天猫店&nbsp;</a>|<a href="">&nbsp;隐私政策&nbsp;</a>|<a href="">&nbsp;问题反馈&nbsp;</a>|<a href="">&nbsp;廉政举报&nbsp;</a>|<a href="">&nbsp;Select Region&nbsp;</a></div>
+    <p>
+        <a href="">&copy;<span>mi.com</span>京ICP证110507号</a>&nbsp;
+        <a href="">京ICP备10046444号</a>&nbsp;<a href="">京公网安备11010802020134号</a>&nbsp;<a href="">京网文[2017]1530-131号</a>
+    </p>
+    <p>
+        <a href="">(京)网械平台备字(2018)第00005号</a>&nbsp;
+        <a href="">互联网药品信息服务资格证(京)-非经营性-204-0090</a>&nbsp;
+        <a href="">营业执照</a>&nbsp;
+        <a href="">医疗器械公告</a>
+    </p>
+</div>
+</body>
+</html>
